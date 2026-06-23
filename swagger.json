@@ -1,0 +1,4143 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Checklist Public API",
+    "description": "Concept public API contract generated from the existing Checklist App OpenAPI and public API mapping notes.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://teamswork-dev.azure-api.net/checklist/api"
+    }
+  ],
+  "paths": {
+    "/checklists": {
+      "get": {
+        "summary": "List checklists",
+        "operationId": "get-checklists",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List checklists response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "checklist-123",
+                          "number": 42,
+                          "subscriptionid": "sub-123",
+                          "tenantid": "tenant-123",
+                          "instanceId": "instance-123",
+                          "status": 1,
+                          "title": "Monthly closing checklist",
+                          "description": "Checklist for month-end finance tasks",
+                          "eventdateformated": "2026-06-30T00:00:00Z",
+                          "requestor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "follower": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "contributor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "calendar": {
+                            "key": "calendar-standard",
+                            "text": "Standard business days"
+                          },
+                          "tag": ["High"],
+                          "tagIds": ["tag-001"],
+                          "taskStatus": ["open"],
+                          "memberCanViewList": ["user-123"],
+                          "disabledTaskFields": [],
+                          "origin": "WebAppWithTemplate",
+                          "originRef": "template-123",
+                          "datecreated": "2026-06-23T09:00:00Z",
+                          "deleted": null,
+                          "taskSort": ["task-123"]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetListChecklist",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": "Existing internal identifier used by the mapped API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "sub-123"
+          },
+          {
+            "name": "instanceId",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          },
+          {
+            "name": "mail",
+            "in": "query",
+            "required": false,
+            "description": "User email used for member visibility filtering.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "alex.tan@example.com"
+          },
+          {
+            "name": "is_owner",
+            "in": "query",
+            "required": false,
+            "description": "Set to 1 when the caller should be treated as an owner.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "description": "Search text.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "monthly"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter value.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "open"
+          },
+          {
+            "name": "tagFilter",
+            "in": "query",
+            "required": false,
+            "description": "Tag filter value. Multiple values may use the existing delimiter supported by the API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Priority/High"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort field.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "title"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "description": "Sort order.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "asc"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create checklist",
+        "operationId": "post-checklist",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create checklist response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "checklist-123",
+                        "number": 42,
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "status": 1,
+                        "title": "Monthly closing checklist",
+                        "description": "Checklist for month-end finance tasks",
+                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskStatus": ["open"],
+                        "memberCanViewList": ["user-123"],
+                        "disabledTaskFields": [],
+                        "origin": "WebAppWithTemplate",
+                        "originRef": "template-123",
+                        "datecreated": "2026-06-23T09:00:00Z",
+                        "deleted": null,
+                        "taskSort": ["task-123"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example InsertChecklist request",
+                  "value": {
+                    "userId": "user-123",
+                    "username": "Alex Tan",
+                    "checklistData": {
+                      "id": "checklist-123",
+                      "number": 42,
+                      "subscriptionid": "sub-123",
+                      "tenantid": "tenant-123",
+                      "instanceId": "instance-123",
+                      "status": 1,
+                      "title": "Monthly closing checklist",
+                      "description": "Checklist for month-end finance tasks",
+                      "eventdateformated": "2026-06-30T00:00:00Z",
+                      "requestor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "follower": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "contributor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "calendar": {
+                        "key": "calendar-standard",
+                        "text": "Standard business days"
+                      },
+                      "tag": ["High"],
+                      "tagIds": ["tag-001"],
+                      "taskStatus": ["open"],
+                      "memberCanViewList": ["user-123"],
+                      "disabledTaskFields": [],
+                      "origin": "WebAppWithTemplate",
+                      "originRef": "template-123",
+                      "datecreated": "2026-06-23T09:00:00Z",
+                      "deleted": null,
+                      "taskSort": ["task-001"]
+                    },
+                    "tasklistData": {
+                      "create": [
+                        {
+                          "id": "task-001",
+                          "task": "Review supporting documents",
+                          "number": 1,
+                          "subscription_id": "sub-123",
+                          "instance_id": "instance-123",
+                          "checklist_id": "checklist-123",
+                          "checklist_name": "Monthly closing checklist",
+                          "duedatenumber": 2,
+                          "tasktag": ["High"],
+                          "taskTagIds": ["tag-001"],
+                          "assignee": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "attachment": [],
+                          "customFieldInput": [],
+                          "created_at": "2026-06-23T09:00:00Z",
+                          "deleted": null
+                        }
+                      ],
+                      "update": [],
+                      "delete": [],
+                      "noAction": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "InsertChecklist",
+        "description": "Public API concept mapped from the existing internal API."
+      }
+    },
+    "/checklists/{checklistId}": {
+      "get": {
+        "summary": "Get checklist by ID",
+        "operationId": "get-checklist-by-id",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Get checklist by ID response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "checklist-123",
+                        "number": 42,
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "status": 1,
+                        "title": "Monthly closing checklist",
+                        "description": "Checklist for month-end finance tasks",
+                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskStatus": ["open"],
+                        "memberCanViewList": ["user-123"],
+                        "disabledTaskFields": [],
+                        "origin": "WebAppWithTemplate",
+                        "originRef": "template-123",
+                        "datecreated": "2026-06-23T09:00:00Z",
+                        "deleted": null,
+                        "taskSort": ["task-123"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetChecklistById",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update checklist",
+        "operationId": "put-checklist",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Update checklist response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "checklist-123",
+                        "number": 42,
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "status": 1,
+                        "title": "Monthly closing checklist",
+                        "description": "Checklist for month-end finance tasks",
+                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskStatus": ["open"],
+                        "memberCanViewList": ["user-123"],
+                        "disabledTaskFields": [],
+                        "origin": "WebAppWithTemplate",
+                        "originRef": "template-123",
+                        "datecreated": "2026-06-23T09:00:00Z",
+                        "deleted": null,
+                        "taskSort": ["task-123"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example PatchChecklist request",
+                  "value": {
+                    "title": "Updated checklist title",
+                    "description": "Updated description",
+                    "requestor": [
+                      {
+                        "id": "user-123",
+                        "text": "Alex Tan",
+                        "email": "alex.tan@example.com"
+                      }
+                    ],
+                    "tagIds": ["tag-001"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "PatchChecklist",
+        "description": "Public API concept mapped from the existing internal API."
+      }
+    },
+    "/checklistsV2/{checklistId}": {
+      "get": {
+        "summary": "Get checklist with tasks",
+        "operationId": "get-checklist-with-tasks",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Get checklist with tasks response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "checklist": {
+                          "id": "checklist-123",
+                          "number": 42,
+                          "subscriptionid": "sub-123",
+                          "tenantid": "tenant-123",
+                          "instanceId": "instance-123",
+                          "status": 1,
+                          "title": "Monthly closing checklist",
+                          "description": "Checklist for month-end finance tasks",
+                          "eventdateformated": "2026-06-30T00:00:00Z",
+                          "requestor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "follower": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "contributor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "calendar": {
+                            "key": "calendar-standard",
+                            "text": "Standard business days"
+                          },
+                          "tag": ["High"],
+                          "tagIds": ["tag-001"],
+                          "taskStatus": ["open"],
+                          "memberCanViewList": ["user-123"],
+                          "disabledTaskFields": [],
+                          "origin": "WebAppWithTemplate",
+                          "originRef": "template-123",
+                          "datecreated": "2026-06-23T09:00:00Z",
+                          "deleted": null,
+                          "taskSort": ["task-123"]
+                        },
+                        "tasks": [
+                          {
+                            "id": "task-123",
+                            "task": "Review supporting documents",
+                            "number": 1,
+                            "subscription_id": "sub-123",
+                            "instance_id": "instance-123",
+                            "checklist_id": "checklist-123",
+                            "checklist_name": "Monthly closing checklist",
+                            "duedatenumber": 2,
+                            "tasktag": ["High"],
+                            "taskTagIds": ["tag-001"],
+                            "assignee": [
+                              {
+                                "id": "user-123",
+                                "text": "Alex Tan",
+                                "email": "alex.tan@example.com"
+                              }
+                            ],
+                            "reviewer": [
+                              {
+                                "id": "user-123",
+                                "text": "Alex Tan",
+                                "email": "alex.tan@example.com"
+                              }
+                            ],
+                            "attachment": [
+                              {
+                                "id": "attachment-123",
+                                "fileName": "evidence.pdf",
+                                "url": "https://example.com/evidence.pdf",
+                                "contentType": "application/pdf"
+                              }
+                            ],
+                            "customFieldInput": [],
+                            "created_at": "2026-06-23T09:00:00Z",
+                            "status": "Open",
+                            "duedate": "2026-06-25T09:00:00Z",
+                            "deleted": null
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "x-existing-api": ["GetChecklistById", "GetListChecklistTask"],
+        "description": "Concept endpoint that returns checklist detail merged with task data.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "required": false,
+            "description": "User identifier used by the mapped internal API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "user-123"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of items to return.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 10
+          }
+        ]
+      }
+    },
+    "/checklist/{checklistId}/tasks": {
+      "get": {
+        "summary": "List checklist tasks",
+        "operationId": "get-checklist-tasks",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List checklist tasks response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "task-123",
+                          "task": "Review supporting documents",
+                          "number": 1,
+                          "subscription_id": "sub-123",
+                          "instance_id": "instance-123",
+                          "checklist_id": "checklist-123",
+                          "checklist_name": "Monthly closing checklist",
+                          "duedatenumber": 2,
+                          "tasktag": ["High"],
+                          "taskTagIds": ["tag-001"],
+                          "assignee": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "attachment": [
+                            {
+                              "id": "attachment-123",
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "created_at": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "duedate": "2026-06-25T09:00:00Z",
+                          "deleted": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetListChecklistTask",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": "Existing internal identifier used by the mapped API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "sub-123"
+          },
+          {
+            "name": "user_id",
+            "in": "query",
+            "required": false,
+            "description": "User identifier used by the mapped internal API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "user-123"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of items to return.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 10
+          }
+        ]
+      }
+    },
+    "/checklist/{checklistId}/activities": {
+      "get": {
+        "summary": "List checklist activities",
+        "operationId": "get-checklist-activities",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List checklist activities response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "activity-123",
+                          "targetId": "checklist-123",
+                          "type": "checklist",
+                          "action": "comment",
+                          "comment": "Looks good",
+                          "createdBy": {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          },
+                          "createdAt": "2026-06-23T09:10:00Z"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetComment",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Activity target type.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist"
+          }
+        ]
+      }
+    },
+    "/tasks": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List tasks response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "continuationToken": "next-token",
+                        "data": [
+                          {
+                            "id": "task-123",
+                            "task": "Review supporting documents",
+                            "number": 1,
+                            "subscription_id": "sub-123",
+                            "instance_id": "instance-123",
+                            "checklist_id": "checklist-123",
+                            "checklist_name": "Monthly closing checklist",
+                            "duedatenumber": 2,
+                            "tasktag": ["High"],
+                            "taskTagIds": ["tag-001"],
+                            "assignee": [
+                              {
+                                "id": "user-123",
+                                "text": "Alex Tan",
+                                "email": "alex.tan@example.com"
+                              }
+                            ],
+                            "reviewer": [
+                              {
+                                "id": "user-123",
+                                "text": "Alex Tan",
+                                "email": "alex.tan@example.com"
+                              }
+                            ],
+                            "attachment": [
+                              {
+                                "id": "attachment-123",
+                                "fileName": "evidence.pdf",
+                                "url": "https://example.com/evidence.pdf",
+                                "contentType": "application/pdf"
+                              }
+                            ],
+                            "customFieldInput": [],
+                            "created_at": "2026-06-23T09:00:00Z",
+                            "status": "Open",
+                            "duedate": "2026-06-25T09:00:00Z",
+                            "deleted": null
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "List tasks",
+        "operationId": "get-tasks",
+        "x-implementation-status": "available",
+        "description": "Public API concept mapped from GetMyTasksV2 in Template.cs. This source operation is not present in the current OpenAPI file.",
+        "x-existing-api": "GetMyTasksV2",
+        "x-existing-api-source": "Template.cs",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter value.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "open"
+          },
+          {
+            "name": "instanceIds",
+            "in": "query",
+            "required": false,
+            "description": "Comma-separated instance identifiers.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123,instance-456"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of items to return.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 10
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "description": "Search text.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "monthly"
+          },
+          {
+            "name": "tagFilter",
+            "in": "query",
+            "required": false,
+            "description": "Tag filter value. Multiple values may use the existing delimiter supported by the API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Priority/High"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create task",
+        "operationId": "post-task",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create task response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "task": "Review supporting documents",
+                        "number": 1,
+                        "subscription_id": "sub-123",
+                        "instance_id": "instance-123",
+                        "checklist_id": "checklist-123",
+                        "checklist_name": "Monthly closing checklist",
+                        "duedatenumber": 2,
+                        "tasktag": ["High"],
+                        "taskTagIds": ["tag-001"],
+                        "assignee": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "created_at": "2026-06-23T09:00:00Z",
+                        "status": "Open",
+                        "duedate": "2026-06-25T09:00:00Z",
+                        "deleted": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Create task request",
+                  "value": {
+                    "userId": "user-123",
+                    "username": "Alex Tan",
+                    "checklistData": {
+                      "id": "checklist-123",
+                      "status": 0
+                    },
+                    "tasklistData": {
+                      "create": [
+                        {
+                          "id": "task-123",
+                          "task": "Review supporting documents",
+                          "number": 1,
+                          "subscription_id": "sub-123",
+                          "instance_id": "instance-123",
+                          "checklist_id": "checklist-123",
+                          "checklist_name": "Monthly closing checklist",
+                          "duedatenumber": 2,
+                          "tasktag": ["High"],
+                          "taskTagIds": ["tag-001"],
+                          "assignee": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "attachment": [
+                            {
+                              "id": "attachment-123",
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "created_at": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "duedate": "2026-06-25T09:00:00Z",
+                          "deleted": null
+                        }
+                      ],
+                      "update": [],
+                      "delete": [],
+                      "noAction": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UpdateChecklist2",
+        "description": "Public task creation concept backed by UpdateChecklist2 using only tasklistData.create."
+      }
+    },
+    "/tasks/{taskId}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Get task by ID response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "task": "Review supporting documents",
+                        "number": 1,
+                        "subscription_id": "sub-123",
+                        "instance_id": "instance-123",
+                        "checklist_id": "checklist-123",
+                        "checklist_name": "Monthly closing checklist",
+                        "duedatenumber": 2,
+                        "tasktag": ["High"],
+                        "taskTagIds": ["tag-001"],
+                        "assignee": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "created_at": "2026-06-23T09:00:00Z",
+                        "status": "Open",
+                        "duedate": "2026-06-25T09:00:00Z",
+                        "deleted": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get task by ID",
+        "operationId": "get-task-by-id",
+        "x-implementation-status": "unavailable",
+        "description": "Public API concept endpoint. No equivalent existing internal API is currently available.",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update task",
+        "operationId": "put-task",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Update task response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "task": "Review supporting documents",
+                        "number": 1,
+                        "subscription_id": "sub-123",
+                        "instance_id": "instance-123",
+                        "checklist_id": "checklist-123",
+                        "checklist_name": "Monthly closing checklist",
+                        "duedatenumber": 2,
+                        "tasktag": ["High"],
+                        "taskTagIds": ["tag-001"],
+                        "assignee": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "created_at": "2026-06-23T09:00:00Z",
+                        "status": "Open",
+                        "duedate": "2026-06-25T09:00:00Z",
+                        "deleted": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Update task request",
+                  "value": {
+                    "id": "task-123",
+                    "task": "Review supporting documents",
+                    "number": 1,
+                    "subscription_id": "sub-123",
+                    "instance_id": "instance-123",
+                    "checklist_id": "checklist-123",
+                    "checklist_name": "Monthly closing checklist",
+                    "duedatenumber": 2,
+                    "tasktag": ["High"],
+                    "taskTagIds": ["tag-001"],
+                    "assignee": [
+                      {
+                        "id": "user-123",
+                        "text": "Alex Tan",
+                        "email": "alex.tan@example.com"
+                      }
+                    ],
+                    "reviewer": [
+                      {
+                        "id": "user-123",
+                        "text": "Alex Tan",
+                        "email": "alex.tan@example.com"
+                      }
+                    ],
+                    "attachment": [
+                      {
+                        "id": "attachment-123",
+                        "fileName": "evidence.pdf",
+                        "url": "https://example.com/evidence.pdf",
+                        "contentType": "application/pdf"
+                      }
+                    ],
+                    "customFieldInput": [],
+                    "created_at": "2026-06-23T09:00:00Z",
+                    "status": "Open",
+                    "duedate": "2026-06-25T09:00:00Z",
+                    "deleted": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": ["PatchTask", "UpdateChecklist2"],
+        "description": "Public task update concept. Submitted tasks map to PatchTask; draft task updates map to UpdateChecklist2."
+      }
+    },
+    "/tasks/{taskId}/attachments": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List task attachments response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "attachment-123",
+                          "fileName": "evidence.pdf",
+                          "url": "https://example.com/evidence.pdf",
+                          "contentType": "application/pdf"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "List task attachments",
+        "operationId": "get-task-attachments",
+        "x-implementation-status": "unavailable",
+        "description": "Planned public endpoint. Existing task list responses already include attachments, but no standalone equivalent API exists.",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          }
+        ]
+      }
+    },
+    "/tasks/{taskId}/activities": {
+      "get": {
+        "summary": "List task activities",
+        "operationId": "get-task-activities",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List task activities response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "activity-123",
+                          "targetId": "task-123",
+                          "type": "task",
+                          "action": "comment",
+                          "comment": "Looks good",
+                          "createdBy": {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          },
+                          "createdAt": "2026-06-23T09:10:00Z"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetComment",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Activity target type.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "task"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create task activity",
+        "operationId": "post-task-activity",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create task activity response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "activity-123",
+                        "targetId": "task-123",
+                        "type": "task",
+                        "action": "comment",
+                        "comment": "Looks good",
+                        "createdBy": {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        },
+                        "createdAt": "2026-06-23T09:10:00Z"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Create task activity request",
+                  "value": {
+                    "type": "task",
+                    "id": "task-123",
+                    "comment": "Looks good",
+                    "userId": "user-123",
+                    "username": "Alex Tan"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "InsertComment",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Activity target type.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "task"
+          }
+        ]
+      }
+    },
+    "/instance": {
+      "get": {
+        "summary": "Get instance",
+        "operationId": "get-instance",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Get instance response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "instance-123",
+                        "tenantId": "tenant-123",
+                        "groupId": "group-123",
+                        "channelId": "channel-123",
+                        "title": "Finance Operations",
+                        "enabled": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetInstanceById",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          }
+        ]
+      }
+    },
+    "/tags/checklists": {
+      "get": {
+        "summary": "List checklist tags",
+        "operationId": "get-checklist-tags",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List checklist tags response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "tag-category-123",
+                          "name": "Priority",
+                          "items": [
+                            {
+                              "id": "tag-001",
+                              "text": "High"
+                            },
+                            {
+                              "id": "tag-002",
+                              "text": "Medium"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "x-existing-api": ["GetMastertagitem", "GetMastertagitembytagcategory"],
+        "description": "Concept endpoint that merges checklist tag categories and tag items.",
+        "parameters": [
+          {
+            "name": "instance_id",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier used by the mapped internal API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          },
+          {
+            "name": "cat",
+            "in": "query",
+            "required": false,
+            "description": "Tag category name.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Priority"
+          }
+        ]
+      }
+    },
+    "/tags/tasks": {
+      "get": {
+        "summary": "List task tags",
+        "operationId": "get-task-tags",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List task tags response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "tag-category-123",
+                          "name": "Priority",
+                          "items": [
+                            {
+                              "id": "tag-001",
+                              "text": "High"
+                            },
+                            {
+                              "id": "tag-002",
+                              "text": "Medium"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "x-existing-api": [
+          "GetMastertagitemtask",
+          "GetMastertagitembytagcategorytask"
+        ],
+        "description": "Concept endpoint that merges task tag categories and tag items.",
+        "parameters": [
+          {
+            "name": "instance_id",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier used by the mapped internal API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          },
+          {
+            "name": "cat",
+            "in": "query",
+            "required": false,
+            "description": "Tag category name.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Priority"
+          }
+        ]
+      }
+    },
+    "/calendars": {
+      "get": {
+        "summary": "List calendars",
+        "operationId": "get-calendars",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List calendars response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "calendar-123",
+                          "calendarname": "Business days",
+                          "days": [1, 2, 3, 4, 5],
+                          "publicholiday": []
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetListMasterCalendar",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "instance_id",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier used by the mapped internal API.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          }
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List users response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "user-123",
+                          "displayName": "Alex Tan",
+                          "mail": "alex.tan@example.com"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "List users",
+        "operationId": "get-users",
+        "x-implementation-status": "unavailable",
+        "description": "Public API concept endpoint. No equivalent existing internal API is currently available."
+      }
+    },
+    "/recurring-checklists": {
+      "get": {
+        "summary": "List recurring checklists",
+        "operationId": "get-recurring-checklists",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List recurring checklists response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "recurring-checklist-123",
+                          "subscriptionid": "sub-123",
+                          "tenantid": "tenant-123",
+                          "instanceId": "instance-123",
+                          "title": "Monthly closing checklist",
+                          "description": "Recurring month-end checklist",
+                          "requestor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "follower": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "contributor": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "calendar": {
+                            "key": "calendar-standard",
+                            "text": "Standard business days"
+                          },
+                          "tag": ["High"],
+                          "tagIds": ["tag-001"],
+                          "taskSort": ["task-123"],
+                          "repeatOption": "monthly",
+                          "beforeEventDateNumber": 0,
+                          "schedule": {
+                            "frequency": "monthly",
+                            "interval": 1
+                          },
+                          "customDate": [],
+                          "activeActualDates": [
+                            {
+                              "date": "2026-06-30T00:00:00Z",
+                              "executed": false
+                            }
+                          ],
+                          "isDisabled": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetRecurringChecklists",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create recurring checklist",
+        "operationId": "post-recurring-checklist",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create recurring checklist response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "recurring-checklist-123",
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "title": "Monthly closing checklist",
+                        "description": "Recurring month-end checklist",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskSort": ["task-123"],
+                        "repeatOption": "monthly",
+                        "beforeEventDateNumber": 0,
+                        "schedule": {
+                          "frequency": "monthly",
+                          "interval": 1
+                        },
+                        "customDate": [],
+                        "activeActualDates": [
+                          {
+                            "date": "2026-06-30T00:00:00Z",
+                            "executed": false
+                          }
+                        ],
+                        "isDisabled": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example InsertRecurringChecklist request",
+                  "value": {
+                    "checklist": {
+                      "id": "checklist-123",
+                      "subscriptionid": "sub-123",
+                      "tenantid": "tenant-123",
+                      "instanceId": "instance-123",
+                      "title": "Monthly closing checklist",
+                      "description": "Checklist for month-end finance tasks",
+                      "requestor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "follower": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "contributor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "calendar": {
+                        "key": "calendar-standard",
+                        "text": "Standard business days"
+                      },
+                      "tag": ["High"],
+                      "tagIds": ["tag-001"],
+                      "taskSort": ["task-001"],
+                      "disabledTaskFields": [],
+                      "repeatOption": "monthly",
+                      "beforeEventDateNumber": 0,
+                      "schedule": {
+                        "frequency": "monthly",
+                        "interval": 1
+                      },
+                      "customDate": [],
+                      "activeActualDates": [
+                        {
+                          "date": "2026-06-30T00:00:00Z",
+                          "executed": false
+                        }
+                      ],
+                      "filteredActiveActualDates": [
+                        {
+                          "date": "2026-06-30T00:00:00Z",
+                          "executed": false
+                        }
+                      ],
+                      "isDisabled": false
+                    },
+                    "templateId": "template-123",
+                    "templateType": "internal"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "InsertRecurringChecklist",
+        "description": "Public API concept mapped from the existing internal API."
+      }
+    },
+    "/recurring-checklists/{checklistId}": {
+      "get": {
+        "summary": "Get recurring checklist by ID",
+        "operationId": "get-recurring-checklist-by-id",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Get recurring checklist by ID response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "recurring-checklist-123",
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "title": "Monthly closing checklist",
+                        "description": "Recurring month-end checklist",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskSort": ["task-123"],
+                        "repeatOption": "monthly",
+                        "beforeEventDateNumber": 0,
+                        "schedule": {
+                          "frequency": "monthly",
+                          "interval": 1
+                        },
+                        "customDate": [],
+                        "activeActualDates": [
+                          {
+                            "date": "2026-06-30T00:00:00Z",
+                            "executed": false
+                          }
+                        ],
+                        "isDisabled": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "GetRecurringChecklistById",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "recurring-checklist-123"
+          },
+          {
+            "name": "instanceId",
+            "in": "query",
+            "required": false,
+            "description": "Instance identifier.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "instance-123"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update recurring checklist",
+        "operationId": "put-recurring-checklist",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Update recurring checklist response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "recurring-checklist-123",
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "title": "Monthly closing checklist",
+                        "description": "Recurring month-end checklist",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskSort": ["task-123"],
+                        "repeatOption": "monthly",
+                        "beforeEventDateNumber": 0,
+                        "schedule": {
+                          "frequency": "monthly",
+                          "interval": 1
+                        },
+                        "customDate": [],
+                        "activeActualDates": [
+                          {
+                            "date": "2026-06-30T00:00:00Z",
+                            "executed": false
+                          }
+                        ],
+                        "isDisabled": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Update recurring checklist request",
+                  "value": {
+                    "username": "Alex Tan",
+                    "checklist": {
+                      "id": "recurring-checklist-123",
+                      "subscriptionid": "sub-123",
+                      "tenantid": "tenant-123",
+                      "instanceId": "instance-123",
+                      "title": "Monthly closing checklist",
+                      "description": "Recurring month-end checklist",
+                      "requestor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "follower": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "contributor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "calendar": {
+                        "key": "calendar-standard",
+                        "text": "Standard business days"
+                      },
+                      "tag": ["High"],
+                      "tagIds": ["tag-001"],
+                      "taskSort": ["task-123"],
+                      "repeatOption": "monthly",
+                      "beforeEventDateNumber": 0,
+                      "schedule": {
+                        "frequency": "monthly",
+                        "interval": 1
+                      },
+                      "customDate": [],
+                      "activeActualDates": [
+                        {
+                          "date": "2026-06-30T00:00:00Z",
+                          "executed": false
+                        }
+                      ],
+                      "isDisabled": false
+                    },
+                    "tasks": {
+                      "create": [
+                        {
+                          "id": "task-123",
+                          "task": "Review supporting documents",
+                          "number": 1,
+                          "subscription_id": "sub-123",
+                          "instance_id": "instance-123",
+                          "checklist_id": "checklist-123",
+                          "checklist_name": "Monthly closing checklist",
+                          "duedatenumber": 2,
+                          "tasktag": ["High"],
+                          "taskTagIds": ["tag-001"],
+                          "assignee": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "attachment": [
+                            {
+                              "id": "attachment-123",
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "created_at": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "duedate": "2026-06-25T09:00:00Z",
+                          "deleted": null
+                        }
+                      ],
+                      "update": [],
+                      "delete": [],
+                      "noAction": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UpdateRecurringChecklist",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "recurring-checklist-123"
+          }
+        ]
+      }
+    },
+    "/tasks/{taskId}/attachment": {
+      "post": {
+        "summary": "Upload task attachment",
+        "operationId": "post-task-attachment",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Upload task attachment response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "attachment-123",
+                        "fileName": "evidence.pdf",
+                        "url": "https://example.com/evidence.pdf",
+                        "contentType": "application/pdf"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example UploadTaskAttachment request",
+                  "value": {
+                    "id": "task-001",
+                    "checklist_id": "checklist-123"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UploadTaskAttachment",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          }
+        ]
+      }
+    },
+    "/checklists/{checklistId}/submit": {
+      "put": {
+        "summary": "Submit checklist",
+        "operationId": "put-checklist-submit",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Submit checklist response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "checklist-123",
+                        "number": 42,
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "status": 1,
+                        "title": "Monthly closing checklist",
+                        "description": "Checklist for month-end finance tasks",
+                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskStatus": ["open"],
+                        "memberCanViewList": ["user-123"],
+                        "disabledTaskFields": [],
+                        "origin": "WebAppWithTemplate",
+                        "originRef": "template-123",
+                        "datecreated": "2026-06-23T09:00:00Z",
+                        "deleted": null,
+                        "taskSort": ["task-123"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Submit checklist request",
+                  "value": {
+                    "userId": "user-123",
+                    "username": "Alex Tan",
+                    "checklistData": {
+                      "id": "checklist-123",
+                      "number": 42,
+                      "subscriptionid": "sub-123",
+                      "tenantid": "tenant-123",
+                      "instanceId": "instance-123",
+                      "status": 1,
+                      "title": "Monthly closing checklist",
+                      "description": "Checklist for month-end finance tasks",
+                      "eventdateformated": "2026-06-30T00:00:00Z",
+                      "requestor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "follower": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "contributor": [
+                        {
+                          "id": "user-123",
+                          "text": "Alex Tan",
+                          "email": "alex.tan@example.com"
+                        }
+                      ],
+                      "calendar": {
+                        "key": "calendar-standard",
+                        "text": "Standard business days"
+                      },
+                      "tag": ["High"],
+                      "tagIds": ["tag-001"],
+                      "taskStatus": ["open"],
+                      "memberCanViewList": ["user-123"],
+                      "disabledTaskFields": [],
+                      "origin": "WebAppWithTemplate",
+                      "originRef": "template-123",
+                      "datecreated": "2026-06-23T09:00:00Z",
+                      "deleted": null,
+                      "taskSort": ["task-123"]
+                    },
+                    "tasklistData": {
+                      "create": [
+                        {
+                          "id": "task-123",
+                          "task": "Review supporting documents",
+                          "number": 1,
+                          "subscription_id": "sub-123",
+                          "instance_id": "instance-123",
+                          "checklist_id": "checklist-123",
+                          "checklist_name": "Monthly closing checklist",
+                          "duedatenumber": 2,
+                          "tasktag": ["High"],
+                          "taskTagIds": ["tag-001"],
+                          "assignee": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "id": "user-123",
+                              "text": "Alex Tan",
+                              "email": "alex.tan@example.com"
+                            }
+                          ],
+                          "attachment": [
+                            {
+                              "id": "attachment-123",
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "created_at": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "duedate": "2026-06-25T09:00:00Z",
+                          "deleted": null
+                        }
+                      ],
+                      "update": [],
+                      "delete": [],
+                      "noAction": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UpdateSubmitChecklist",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          },
+          {
+            "name": "isBackend",
+            "in": "query",
+            "required": false,
+            "description": "Existing internal flag for backend submit processing.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ]
+      }
+    },
+    "/tasks/{taskId}/status": {
+      "put": {
+        "summary": "Update task status",
+        "operationId": "put-task-status",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "task-123"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Update task status response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "task": "Review supporting documents",
+                        "number": 1,
+                        "subscription_id": "sub-123",
+                        "instance_id": "instance-123",
+                        "checklist_id": "checklist-123",
+                        "checklist_name": "Monthly closing checklist",
+                        "duedatenumber": 2,
+                        "tasktag": ["High"],
+                        "taskTagIds": ["tag-001"],
+                        "assignee": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "created_at": "2026-06-23T09:00:00Z",
+                        "status": "Resolved",
+                        "duedate": "2026-06-25T09:00:00Z",
+                        "deleted": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Update task status request",
+                  "value": {
+                    "status": "Resolved",
+                    "comment": "Completed review"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "x-existing-api": "PatchTask",
+        "description": "Status-only public task update concept backed by PatchTask."
+      }
+    },
+    "/recurring-checklist/{checklistId}/status": {
+      "put": {
+        "summary": "Update recurring checklist status",
+        "operationId": "put-recurring-checklist-status",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Update recurring checklist status response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "recurring-checklist-123",
+                        "subscriptionid": "sub-123",
+                        "tenantid": "tenant-123",
+                        "instanceId": "instance-123",
+                        "title": "Monthly closing checklist",
+                        "description": "Recurring month-end checklist",
+                        "requestor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "follower": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "contributor": [
+                          {
+                            "id": "user-123",
+                            "text": "Alex Tan",
+                            "email": "alex.tan@example.com"
+                          }
+                        ],
+                        "calendar": {
+                          "key": "calendar-standard",
+                          "text": "Standard business days"
+                        },
+                        "tag": ["High"],
+                        "tagIds": ["tag-001"],
+                        "taskSort": ["task-123"],
+                        "repeatOption": "monthly",
+                        "beforeEventDateNumber": 0,
+                        "schedule": {
+                          "frequency": "monthly",
+                          "interval": 1
+                        },
+                        "customDate": [],
+                        "activeActualDates": [
+                          {
+                            "date": "2026-06-30T00:00:00Z",
+                            "executed": false
+                          }
+                        ],
+                        "isDisabled": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Update recurring checklist status request",
+                  "value": {
+                    "isDisabled": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "x-existing-api": "UpdateRecurringChecklist",
+        "description": "Status-only public recurring checklist concept backed by UpdateRecurringChecklist.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "recurring-checklist-123"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "name": "Ocp-Apim-Subscription-Key",
+        "in": "header"
+      },
+      "apiKeyQuery": {
+        "type": "apiKey",
+        "name": "subscription-key",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ]
+}
