@@ -39,23 +39,26 @@
                           "eventdateformated": "2026-06-30T00:00:00Z",
                           "requestor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "follower": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "contributor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "calendar": {
@@ -244,23 +247,26 @@
                         "eventdateformated": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -357,23 +363,26 @@
                       "eventdateformated": "2026-06-30T00:00:00Z",
                       "requestor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "calendar": {
@@ -406,16 +415,18 @@
                           "taskTagIds": ["tag-001"],
                           "assignee": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "attachment": [],
@@ -466,23 +477,26 @@
                         "eventdateformated": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -610,23 +624,26 @@
                         "eventdateformated": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -713,9 +730,10 @@
                     "description": "Updated description",
                     "requestor": [
                       {
-                        "id": "user-123",
-                        "text": "Alex Tan",
-                        "email": "alex.tan@example.com"
+                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                        "imageInitials": "MA",
+                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                        "text": "MOD Administrator"
                       }
                     ],
                     "tagIds": ["tag-001"]
@@ -758,23 +776,26 @@
                           "eventdateformated": "2026-06-30T00:00:00Z",
                           "requestor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "follower": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "contributor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "calendar": {
@@ -806,16 +827,18 @@
                             "taskTagIds": ["tag-001"],
                             "assignee": [
                               {
-                                "id": "user-123",
-                                "text": "Alex Tan",
-                                "email": "alex.tan@example.com"
+                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                                "imageInitials": "MA",
+                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                                "text": "MOD Administrator"
                               }
                             ],
                             "reviewer": [
                               {
-                                "id": "user-123",
-                                "text": "Alex Tan",
-                                "email": "alex.tan@example.com"
+                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                                "imageInitials": "MA",
+                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                                "text": "MOD Administrator"
                               }
                             ],
                             "attachment": [
@@ -957,16 +980,18 @@
                           "taskTagIds": ["tag-001"],
                           "assignee": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "attachment": [
@@ -1111,9 +1136,10 @@
                           "action": "comment",
                           "comment": "Looks good",
                           "createdBy": {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           },
                           "createdAt": "2026-06-23T09:10:00Z"
                         }
@@ -1231,16 +1257,18 @@
                             "taskTagIds": ["tag-001"],
                             "assignee": [
                               {
-                                "id": "user-123",
-                                "text": "Alex Tan",
-                                "email": "alex.tan@example.com"
+                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                                "imageInitials": "MA",
+                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                                "text": "MOD Administrator"
                               }
                             ],
                             "reviewer": [
                               {
-                                "id": "user-123",
-                                "text": "Alex Tan",
-                                "email": "alex.tan@example.com"
+                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                                "imageInitials": "MA",
+                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                                "text": "MOD Administrator"
                               }
                             ],
                             "attachment": [
@@ -1393,16 +1421,18 @@
                         "taskTagIds": ["tag-001"],
                         "assignee": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "reviewer": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "attachment": [
@@ -1505,16 +1535,18 @@
                           "taskTagIds": ["tag-001"],
                           "assignee": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "attachment": [
@@ -1573,16 +1605,18 @@
                         "taskTagIds": ["tag-001"],
                         "assignee": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "reviewer": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "attachment": [
@@ -1711,16 +1745,18 @@
                         "taskTagIds": ["tag-001"],
                         "assignee": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "reviewer": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "attachment": [
@@ -1814,16 +1850,18 @@
                     "taskTagIds": ["tag-001"],
                     "assignee": [
                       {
-                        "id": "user-123",
-                        "text": "Alex Tan",
-                        "email": "alex.tan@example.com"
+                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                        "imageInitials": "MA",
+                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                        "text": "MOD Administrator"
                       }
                     ],
                     "reviewer": [
                       {
-                        "id": "user-123",
-                        "text": "Alex Tan",
-                        "email": "alex.tan@example.com"
+                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                        "imageInitials": "MA",
+                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                        "text": "MOD Administrator"
                       }
                     ],
                     "attachment": [
@@ -1969,9 +2007,10 @@
                           "action": "comment",
                           "comment": "Looks good",
                           "createdBy": {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           },
                           "createdAt": "2026-06-23T09:10:00Z"
                         }
@@ -2080,9 +2119,10 @@
                         "action": "comment",
                         "comment": "Looks good",
                         "createdBy": {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         },
                         "createdAt": "2026-06-23T09:10:00Z"
                       }
@@ -2590,9 +2630,10 @@
                       "message": "Success",
                       "data": [
                         {
-                          "id": "user-123",
-                          "displayName": "Alex Tan",
-                          "mail": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ]
                     }
@@ -2684,23 +2725,26 @@
                           "description": "Recurring month-end checklist",
                           "requestor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "follower": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "contributor": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "calendar": {
@@ -2811,23 +2855,26 @@
                         "description": "Recurring month-end checklist",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -2926,23 +2973,26 @@
                       "description": "Checklist for month-end finance tasks",
                       "requestor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "calendar": {
@@ -3011,23 +3061,26 @@
                         "description": "Recurring month-end checklist",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -3148,23 +3201,26 @@
                         "description": "Recurring month-end checklist",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -3264,23 +3320,26 @@
                       "description": "Recurring month-end checklist",
                       "requestor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "calendar": {
@@ -3320,16 +3379,18 @@
                           "taskTagIds": ["tag-001"],
                           "assignee": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "attachment": [
@@ -3510,23 +3571,26 @@
                         "eventdateformated": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
@@ -3623,23 +3687,26 @@
                       "eventdateformated": "2026-06-30T00:00:00Z",
                       "requestor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "user-123",
-                          "text": "Alex Tan",
-                          "email": "alex.tan@example.com"
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "imageInitials": "MA",
+                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                          "text": "MOD Administrator"
                         }
                       ],
                       "calendar": {
@@ -3672,16 +3739,18 @@
                           "taskTagIds": ["tag-001"],
                           "assignee": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "user-123",
-                              "text": "Alex Tan",
-                              "email": "alex.tan@example.com"
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
                             }
                           ],
                           "attachment": [
@@ -3774,16 +3843,18 @@
                         "taskTagIds": ["tag-001"],
                         "assignee": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "reviewer": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "attachment": [
@@ -3902,23 +3973,26 @@
                         "description": "Recurring month-end checklist",
                         "requestor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "follower": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "contributor": [
                           {
-                            "id": "user-123",
-                            "text": "Alex Tan",
-                            "email": "alex.tan@example.com"
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "imageInitials": "MA",
+                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                            "text": "MOD Administrator"
                           }
                         ],
                         "calendar": {
