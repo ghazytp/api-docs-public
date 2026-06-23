@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Checklist Public API",
-    "description": "Concept public API contract generated from the existing Checklist App OpenAPI and public API mapping notes.",
+    "description": "Public API contract for Checklist App, defining the planned external REST API surface for checklist, task, attachment, tag, calendar, user, instance, and recurring checklist operations.",
     "version": "1.0"
   },
   "servers": [
@@ -145,16 +145,6 @@
               "type": "string"
             },
             "example": "sub-123"
-          },
-          {
-            "name": "instanceId",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
           },
           {
             "name": "mail",
@@ -1345,16 +1335,6 @@
             "example": "open"
           },
           {
-            "name": "instanceIds",
-            "in": "query",
-            "required": false,
-            "description": "Comma-separated instance identifiers.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123,instance-456"
-          },
-          {
             "name": "limit",
             "in": "query",
             "required": false,
@@ -2291,19 +2271,7 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetInstanceById",
-        "description": "Public API concept mapped from the existing internal API.",
-        "parameters": [
-          {
-            "name": "instanceId",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
-          }
-        ]
+        "description": "Public API concept mapped from the existing internal API."
       }
     },
     "/tags/checklists": {
@@ -2399,16 +2367,6 @@
         "x-existing-api": ["GetMastertagitem", "GetMastertagitembytagcategory"],
         "description": "Concept endpoint that merges checklist tag categories and tag items.",
         "parameters": [
-          {
-            "name": "instance_id",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier used by the mapped internal API.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
-          },
           {
             "name": "cat",
             "in": "query",
@@ -2519,16 +2477,6 @@
         "description": "Concept endpoint that merges task tag categories and tag items.",
         "parameters": [
           {
-            "name": "instance_id",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier used by the mapped internal API.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
-          },
-          {
             "name": "cat",
             "in": "query",
             "required": false,
@@ -2624,19 +2572,7 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetListMasterCalendar",
-        "description": "Public API concept mapped from the existing internal API.",
-        "parameters": [
-          {
-            "name": "instance_id",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier used by the mapped internal API.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
-          }
-        ]
+        "description": "Public API concept mapped from the existing internal API."
       }
     },
     "/users": {
@@ -2850,19 +2786,7 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetRecurringChecklists",
-        "description": "Public API concept mapped from the existing internal API.",
-        "parameters": [
-          {
-            "name": "instanceId",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
-          }
-        ]
+        "description": "Public API concept mapped from the existing internal API."
       },
       "post": {
         "summary": "Create recurring checklist",
@@ -3198,16 +3122,6 @@
               "type": "string"
             },
             "example": "recurring-checklist-123"
-          },
-          {
-            "name": "instanceId",
-            "in": "query",
-            "required": false,
-            "description": "Instance identifier.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "instance-123"
           }
         ]
       },
