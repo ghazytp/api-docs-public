@@ -25,56 +25,52 @@
                     "summary": "Example List checklists response",
                     "value": {
                       "error": false,
-                      "message": "Success",
+                      "message": "",
                       "data": [
                         {
-                          "id": "checklist-123",
-                          "number": 42,
-                          "subscriptionid": "sub-123",
-                          "tenantid": "tenant-123",
-                          "instanceId": "instance-123",
-                          "status": 1,
-                          "title": "Monthly closing checklist",
-                          "description": "Checklist for month-end finance tasks",
-                          "eventdateformated": "2026-06-30T00:00:00Z",
                           "requestor": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
-                          "follower": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
-                            }
+                          "number": 1,
+                          "eventdateformated": "2026-06-24T00:00:00",
+                          "taskStatus": [
+                            "open",
+                            "dueWithinTwoDays"
                           ],
-                          "contributor": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
-                            }
-                          ],
+                          "origin": null,
+                          "originRef": null,
+                          "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
+                          "subscriptionid": null,
+                          "tenantid": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
+                          "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
+                          "title": "Checklist A1",
+                          "description": "123",
+                          "status": 1,
                           "calendar": {
-                            "key": "calendar-standard",
-                            "text": "Standard business days"
+                            "key": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
+                            "text": "Working Days",
+                            "tag": null
                           },
-                          "tag": ["High"],
-                          "tagIds": ["tag-001"],
-                          "taskStatus": ["open"],
-                          "memberCanViewList": ["user-123"],
+                          "tag": [],
+                          "tagIds": [
+                            "be4b6183-7324-559a-ee04-ab52aa8b1805"
+                          ],
+                          "follower": [],
+                          "contributor": [],
+                          "taskSort": [
+                            "06e9f2e0-8b1f-4537-bbe4-73fb49ce2ad9"
+                          ],
+                          "memberCanViewList": [
+                            "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "e6674e96-7576-4eff-a46f-3d9c03871075"
+                          ],
                           "disabledTaskFields": [],
-                          "origin": "WebAppWithTemplate",
-                          "originRef": "template-123",
-                          "datecreated": "2026-06-23T09:00:00Z",
-                          "deleted": null,
-                          "taskSort": ["task-123"]
+                          "datecreated": "2026-06-22T04:27:19.3410906Z",
+                          "deleted": null
                         }
                       ]
                     }
@@ -248,41 +244,48 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskStatus": ["open"],
-                        "memberCanViewList": ["user-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskStatus": [
+                          "open"
+                        ],
+                        "memberCanViewList": [
+                          "user-123"
+                        ],
                         "disabledTaskFields": [],
                         "origin": "WebAppWithTemplate",
                         "originRef": "template-123",
                         "datecreated": "2026-06-23T09:00:00Z",
                         "deleted": null,
-                        "taskSort": ["task-123"]
+                        "taskSort": [
+                          "task-123"
+                        ]
                       }
                     }
                   }
@@ -364,41 +367,48 @@
                       "requestor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
                         "key": "calendar-standard",
                         "text": "Standard business days"
                       },
-                      "tag": ["High"],
-                      "tagIds": ["tag-001"],
-                      "taskStatus": ["open"],
-                      "memberCanViewList": ["user-123"],
+                      "tag": [
+                        "High"
+                      ],
+                      "tagIds": [
+                        "tag-001"
+                      ],
+                      "taskStatus": [
+                        "open"
+                      ],
+                      "memberCanViewList": [
+                        "user-123"
+                      ],
                       "disabledTaskFields": [],
                       "origin": "WebAppWithTemplate",
                       "originRef": "template-123",
                       "datecreated": "2026-06-23T09:00:00Z",
                       "deleted": null,
-                      "taskSort": ["task-001"]
+                      "taskSort": [
+                        "task-001"
+                      ]
                     },
                     "tasklistData": {
                       "create": [
@@ -411,22 +421,24 @@
                           "checklist_id": "checklist-123",
                           "checklist_name": "Monthly closing checklist",
                           "duedatenumber": 2,
-                          "tasktag": ["High"],
-                          "taskTagIds": ["tag-001"],
+                          "tasktag": [
+                            "High"
+                          ],
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
                           "assignee": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [],
@@ -464,55 +476,51 @@
                     "summary": "Example Get checklist by ID response",
                     "value": {
                       "error": false,
-                      "message": "Success",
+                      "message": "",
                       "data": {
-                        "id": "checklist-123",
-                        "number": 42,
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
-                        "instanceId": "instance-123",
-                        "status": 1,
-                        "title": "Monthly closing checklist",
-                        "description": "Checklist for month-end finance tasks",
-                        "eventdateformated": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
-                        "follower": [
-                          {
-                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
-                          }
+                        "number": 1,
+                        "eventdateformated": "2026-06-24T00:00:00",
+                        "taskStatus": [
+                          "open",
+                          "dueWithinTwoDays"
                         ],
-                        "contributor": [
-                          {
-                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
-                          }
-                        ],
+                        "origin": null,
+                        "originRef": null,
+                        "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
+                        "subscriptionid": null,
+                        "tenantid": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
+                        "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
+                        "title": "Checklist A1",
+                        "description": "123",
+                        "status": 1,
                         "calendar": {
-                          "key": "calendar-standard",
-                          "text": "Standard business days"
+                          "key": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
+                          "text": "Working Days",
+                          "tag": null
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskStatus": ["open"],
-                        "memberCanViewList": ["user-123"],
+                        "tag": [],
+                        "tagIds": [
+                          "be4b6183-7324-559a-ee04-ab52aa8b1805"
+                        ],
+                        "follower": [],
+                        "contributor": [],
+                        "taskSort": [
+                          "06e9f2e0-8b1f-4537-bbe4-73fb49ce2ad9"
+                        ],
+                        "memberCanViewList": [
+                          "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "e6674e96-7576-4eff-a46f-3d9c03871075"
+                        ],
                         "disabledTaskFields": [],
-                        "origin": "WebAppWithTemplate",
-                        "originRef": "template-123",
-                        "datecreated": "2026-06-23T09:00:00Z",
-                        "deleted": null,
-                        "taskSort": ["task-123"]
+                        "datecreated": "2026-06-22T04:27:19.3410906Z",
+                        "deleted": null
                       }
                     }
                   }
@@ -625,41 +633,48 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskStatus": ["open"],
-                        "memberCanViewList": ["user-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskStatus": [
+                          "open"
+                        ],
+                        "memberCanViewList": [
+                          "user-123"
+                        ],
                         "disabledTaskFields": [],
                         "origin": "WebAppWithTemplate",
                         "originRef": "template-123",
                         "datecreated": "2026-06-23T09:00:00Z",
                         "deleted": null,
-                        "taskSort": ["task-123"]
+                        "taskSort": [
+                          "task-123"
+                        ]
                       }
                     }
                   }
@@ -731,12 +746,13 @@
                     "requestor": [
                       {
                         "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                        "imageInitials": "MA",
-                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                        "text": "MOD Administrator"
+                        "displayName": "MOD Administrator",
+                        "email": "admin@m365x80523924.onmicrosoft.com"
                       }
                     ],
-                    "tagIds": ["tag-001"]
+                    "tagIds": [
+                      "tag-001"
+                    ]
                   }
                 }
               }
@@ -777,41 +793,48 @@
                           "requestor": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "follower": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "contributor": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "calendar": {
                             "key": "calendar-standard",
                             "text": "Standard business days"
                           },
-                          "tag": ["High"],
-                          "tagIds": ["tag-001"],
-                          "taskStatus": ["open"],
-                          "memberCanViewList": ["user-123"],
+                          "tag": [
+                            "High"
+                          ],
+                          "tagIds": [
+                            "tag-001"
+                          ],
+                          "taskStatus": [
+                            "open"
+                          ],
+                          "memberCanViewList": [
+                            "user-123"
+                          ],
                           "disabledTaskFields": [],
                           "origin": "WebAppWithTemplate",
                           "originRef": "template-123",
                           "datecreated": "2026-06-23T09:00:00Z",
                           "deleted": null,
-                          "taskSort": ["task-123"]
+                          "taskSort": [
+                            "task-123"
+                          ]
                         },
                         "tasks": [
                           {
@@ -823,22 +846,24 @@
                             "checklist_id": "checklist-123",
                             "checklist_name": "Monthly closing checklist",
                             "duedatenumber": 2,
-                            "tasktag": ["High"],
-                            "taskTagIds": ["tag-001"],
+                            "tasktag": [
+                              "High"
+                            ],
+                            "taskTagIds": [
+                              "tag-001"
+                            ],
                             "assignee": [
                               {
                                 "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "imageInitials": "MA",
-                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                                "text": "MOD Administrator"
+                                "displayName": "MOD Administrator",
+                                "email": "admin@m365x80523924.onmicrosoft.com"
                               }
                             ],
                             "reviewer": [
                               {
                                 "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "imageInitials": "MA",
-                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                                "text": "MOD Administrator"
+                                "displayName": "MOD Administrator",
+                                "email": "admin@m365x80523924.onmicrosoft.com"
                               }
                             ],
                             "attachment": [
@@ -916,7 +941,10 @@
           }
         },
         "x-implementation-status": "concept",
-        "x-existing-api": ["GetChecklistById", "GetListChecklistTask"],
+        "x-existing-api": [
+          "GetChecklistById",
+          "GetListChecklistTask"
+        ],
         "description": "Concept endpoint that returns checklist detail merged with task data.",
         "parameters": [
           {
@@ -976,22 +1004,24 @@
                           "checklist_id": "checklist-123",
                           "checklist_name": "Monthly closing checklist",
                           "duedatenumber": 2,
-                          "tasktag": ["High"],
-                          "taskTagIds": ["tag-001"],
+                          "tasktag": [
+                            "High"
+                          ],
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
                           "assignee": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [
@@ -1137,9 +1167,8 @@
                           "comment": "Looks good",
                           "createdBy": {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           },
                           "createdAt": "2026-06-23T09:10:00Z"
                         }
@@ -1253,22 +1282,24 @@
                             "checklist_id": "checklist-123",
                             "checklist_name": "Monthly closing checklist",
                             "duedatenumber": 2,
-                            "tasktag": ["High"],
-                            "taskTagIds": ["tag-001"],
+                            "tasktag": [
+                              "High"
+                            ],
+                            "taskTagIds": [
+                              "tag-001"
+                            ],
                             "assignee": [
                               {
                                 "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "imageInitials": "MA",
-                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                                "text": "MOD Administrator"
+                                "displayName": "MOD Administrator",
+                                "email": "admin@m365x80523924.onmicrosoft.com"
                               }
                             ],
                             "reviewer": [
                               {
                                 "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "imageInitials": "MA",
-                                "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                                "text": "MOD Administrator"
+                                "displayName": "MOD Administrator",
+                                "email": "admin@m365x80523924.onmicrosoft.com"
                               }
                             ],
                             "attachment": [
@@ -1417,22 +1448,24 @@
                         "checklist_id": "checklist-123",
                         "checklist_name": "Monthly closing checklist",
                         "duedatenumber": 2,
-                        "tasktag": ["High"],
-                        "taskTagIds": ["tag-001"],
+                        "tasktag": [
+                          "High"
+                        ],
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
                         "assignee": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "reviewer": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "attachment": [
@@ -1531,22 +1564,24 @@
                           "checklist_id": "checklist-123",
                           "checklist_name": "Monthly closing checklist",
                           "duedatenumber": 2,
-                          "tasktag": ["High"],
-                          "taskTagIds": ["tag-001"],
+                          "tasktag": [
+                            "High"
+                          ],
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
                           "assignee": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [
@@ -1601,22 +1636,24 @@
                         "checklist_id": "checklist-123",
                         "checklist_name": "Monthly closing checklist",
                         "duedatenumber": 2,
-                        "tasktag": ["High"],
-                        "taskTagIds": ["tag-001"],
+                        "tasktag": [
+                          "High"
+                        ],
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
                         "assignee": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "reviewer": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "attachment": [
@@ -1741,22 +1778,24 @@
                         "checklist_id": "checklist-123",
                         "checklist_name": "Monthly closing checklist",
                         "duedatenumber": 2,
-                        "tasktag": ["High"],
-                        "taskTagIds": ["tag-001"],
+                        "tasktag": [
+                          "High"
+                        ],
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
                         "assignee": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "reviewer": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "attachment": [
@@ -1846,22 +1885,24 @@
                     "checklist_id": "checklist-123",
                     "checklist_name": "Monthly closing checklist",
                     "duedatenumber": 2,
-                    "tasktag": ["High"],
-                    "taskTagIds": ["tag-001"],
+                    "tasktag": [
+                      "High"
+                    ],
+                    "taskTagIds": [
+                      "tag-001"
+                    ],
                     "assignee": [
                       {
                         "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                        "imageInitials": "MA",
-                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                        "text": "MOD Administrator"
+                        "displayName": "MOD Administrator",
+                        "email": "admin@m365x80523924.onmicrosoft.com"
                       }
                     ],
                     "reviewer": [
                       {
                         "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                        "imageInitials": "MA",
-                        "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                        "text": "MOD Administrator"
+                        "displayName": "MOD Administrator",
+                        "email": "admin@m365x80523924.onmicrosoft.com"
                       }
                     ],
                     "attachment": [
@@ -1884,7 +1925,10 @@
           }
         },
         "x-implementation-status": "available",
-        "x-existing-api": ["PatchTask", "UpdateChecklist2"],
+        "x-existing-api": [
+          "PatchTask",
+          "UpdateChecklist2"
+        ],
         "description": "Public task update concept. Submitted tasks map to PatchTask; draft task updates map to UpdateChecklist2."
       }
     },
@@ -2008,9 +2052,8 @@
                           "comment": "Looks good",
                           "createdBy": {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           },
                           "createdAt": "2026-06-23T09:10:00Z"
                         }
@@ -2120,9 +2163,8 @@
                         "comment": "Looks good",
                         "createdBy": {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         },
                         "createdAt": "2026-06-23T09:10:00Z"
                       }
@@ -2404,7 +2446,10 @@
           }
         },
         "x-implementation-status": "concept",
-        "x-existing-api": ["GetMastertagitem", "GetMastertagitembytagcategory"],
+        "x-existing-api": [
+          "GetMastertagitem",
+          "GetMastertagitembytagcategory"
+        ],
         "description": "Concept endpoint that merges checklist tag categories and tag items.",
         "parameters": [
           {
@@ -2548,7 +2593,13 @@
                         {
                           "id": "calendar-123",
                           "calendarname": "Business days",
-                          "days": [1, 2, 3, 4, 5],
+                          "days": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5
+                          ],
                           "publicholiday": []
                         }
                       ]
@@ -2622,6 +2673,28 @@
             "description": "",
             "content": {
               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error",
+                    "message",
+                    "data"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    }
+                  }
+                },
                 "examples": {
                   "success": {
                     "summary": "Example List users response",
@@ -2631,9 +2704,8 @@
                       "data": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ]
                     }
@@ -2726,34 +2798,37 @@
                           "requestor": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "follower": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "contributor": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "calendar": {
                             "key": "calendar-standard",
                             "text": "Standard business days"
                           },
-                          "tag": ["High"],
-                          "tagIds": ["tag-001"],
-                          "taskSort": ["task-123"],
+                          "tag": [
+                            "High"
+                          ],
+                          "tagIds": [
+                            "tag-001"
+                          ],
+                          "taskSort": [
+                            "task-123"
+                          ],
                           "repeatOption": "monthly",
                           "beforeEventDateNumber": 0,
                           "schedule": {
@@ -2856,34 +2931,37 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskSort": ["task-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskSort": [
+                          "task-123"
+                        ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
                         "schedule": {
@@ -2974,34 +3052,37 @@
                       "requestor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
                         "key": "calendar-standard",
                         "text": "Standard business days"
                       },
-                      "tag": ["High"],
-                      "tagIds": ["tag-001"],
-                      "taskSort": ["task-001"],
+                      "tag": [
+                        "High"
+                      ],
+                      "tagIds": [
+                        "tag-001"
+                      ],
+                      "taskSort": [
+                        "task-001"
+                      ],
                       "disabledTaskFields": [],
                       "repeatOption": "monthly",
                       "beforeEventDateNumber": 0,
@@ -3062,34 +3143,37 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskSort": ["task-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskSort": [
+                          "task-123"
+                        ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
                         "schedule": {
@@ -3202,34 +3286,37 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskSort": ["task-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskSort": [
+                          "task-123"
+                        ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
                         "schedule": {
@@ -3321,34 +3408,37 @@
                       "requestor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
                         "key": "calendar-standard",
                         "text": "Standard business days"
                       },
-                      "tag": ["High"],
-                      "tagIds": ["tag-001"],
-                      "taskSort": ["task-123"],
+                      "tag": [
+                        "High"
+                      ],
+                      "tagIds": [
+                        "tag-001"
+                      ],
+                      "taskSort": [
+                        "task-123"
+                      ],
                       "repeatOption": "monthly",
                       "beforeEventDateNumber": 0,
                       "schedule": {
@@ -3375,22 +3465,24 @@
                           "checklist_id": "checklist-123",
                           "checklist_name": "Monthly closing checklist",
                           "duedatenumber": 2,
-                          "tasktag": ["High"],
-                          "taskTagIds": ["tag-001"],
+                          "tasktag": [
+                            "High"
+                          ],
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
                           "assignee": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [
@@ -3572,41 +3664,48 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskStatus": ["open"],
-                        "memberCanViewList": ["user-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskStatus": [
+                          "open"
+                        ],
+                        "memberCanViewList": [
+                          "user-123"
+                        ],
                         "disabledTaskFields": [],
                         "origin": "WebAppWithTemplate",
                         "originRef": "template-123",
                         "datecreated": "2026-06-23T09:00:00Z",
                         "deleted": null,
-                        "taskSort": ["task-123"]
+                        "taskSort": [
+                          "task-123"
+                        ]
                       }
                     }
                   }
@@ -3688,41 +3787,48 @@
                       "requestor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
                           "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "imageInitials": "MA",
-                          "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                          "text": "MOD Administrator"
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
                         "key": "calendar-standard",
                         "text": "Standard business days"
                       },
-                      "tag": ["High"],
-                      "tagIds": ["tag-001"],
-                      "taskStatus": ["open"],
-                      "memberCanViewList": ["user-123"],
+                      "tag": [
+                        "High"
+                      ],
+                      "tagIds": [
+                        "tag-001"
+                      ],
+                      "taskStatus": [
+                        "open"
+                      ],
+                      "memberCanViewList": [
+                        "user-123"
+                      ],
                       "disabledTaskFields": [],
                       "origin": "WebAppWithTemplate",
                       "originRef": "template-123",
                       "datecreated": "2026-06-23T09:00:00Z",
                       "deleted": null,
-                      "taskSort": ["task-123"]
+                      "taskSort": [
+                        "task-123"
+                      ]
                     },
                     "tasklistData": {
                       "create": [
@@ -3735,22 +3841,24 @@
                           "checklist_id": "checklist-123",
                           "checklist_name": "Monthly closing checklist",
                           "duedatenumber": 2,
-                          "tasktag": ["High"],
-                          "taskTagIds": ["tag-001"],
+                          "tasktag": [
+                            "High"
+                          ],
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
                           "assignee": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
                               "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "imageInitials": "MA",
-                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                              "text": "MOD Administrator"
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [
@@ -3839,22 +3947,24 @@
                         "checklist_id": "checklist-123",
                         "checklist_name": "Monthly closing checklist",
                         "duedatenumber": 2,
-                        "tasktag": ["High"],
-                        "taskTagIds": ["tag-001"],
+                        "tasktag": [
+                          "High"
+                        ],
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
                         "assignee": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "reviewer": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "attachment": [
@@ -3974,34 +4084,37 @@
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "follower": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "contributor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "imageInitials": "MA",
-                            "secondaryText": "admin@m365x80523924.onmicrosoft.com",
-                            "text": "MOD Administrator"
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
                           }
                         ],
                         "calendar": {
                           "key": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": ["High"],
-                        "tagIds": ["tag-001"],
-                        "taskSort": ["task-123"],
+                        "tag": [
+                          "High"
+                        ],
+                        "tagIds": [
+                          "tag-001"
+                        ],
+                        "taskSort": [
+                          "task-123"
+                        ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
                         "schedule": {
@@ -4107,6 +4220,34 @@
     }
   },
   "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "required": [
+          "id",
+          "displayName",
+          "email"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique user identifier.",
+            "example": "5a70122c-407e-4fa5-8a6f-326f463f954c"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "User display name.",
+            "example": "MOD Administrator"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "User email address.",
+            "example": "admin@m365x80523924.onmicrosoft.com"
+          }
+        }
+      }
+    },
     "securitySchemes": {
       "apiKeyHeader": {
         "type": "apiKey",
