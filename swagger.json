@@ -36,40 +36,29 @@
                             }
                           ],
                           "number": 1,
-                          "eventdateformated": "2026-06-24T00:00:00",
+                          "eventDateFormatted": "2026-06-24T00:00:00",
                           "taskStatus": [
                             "open",
                             "dueWithinTwoDays"
                           ],
-                          "origin": null,
-                          "originRef": null,
                           "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
-                          "subscriptionid": null,
-                          "tenantid": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
+                          "groupId": null,
+                          "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
                           "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
                           "title": "Checklist A1",
                           "description": "123",
-                          "status": 1,
+                          "status": "Submitted",
                           "calendar": {
-                            "key": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
-                            "text": "Working Days",
-                            "tag": null
+                            "id": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
+                            "text": "Working Days"
                           },
-                          "tag": [],
                           "tagIds": [
                             "be4b6183-7324-559a-ee04-ab52aa8b1805"
                           ],
                           "follower": [],
                           "contributor": [],
-                          "taskSort": [
-                            "06e9f2e0-8b1f-4537-bbe4-73fb49ce2ad9"
-                          ],
-                          "memberCanViewList": [
-                            "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "e6674e96-7576-4eff-a46f-3d9c03871075"
-                          ],
                           "disabledTaskFields": [],
-                          "datecreated": "2026-06-22T04:27:19.3410906Z",
+                          "dateCreated": "2026-06-22T04:27:19.3410906Z",
                           "deleted": null
                         }
                       ]
@@ -215,6 +204,9 @@
             },
             "example": "asc"
           }
+        ],
+        "tags": [
+          "Checklists"
         ]
       },
       "post": {
@@ -234,13 +226,13 @@
                       "data": {
                         "id": "checklist-123",
                         "number": 42,
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
-                        "status": 1,
+                        "status": "Submitted",
                         "title": "Monthly closing checklist",
                         "description": "Checklist for month-end finance tasks",
-                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "eventDateFormatted": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
@@ -263,29 +255,18 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
                         ],
                         "taskStatus": [
                           "open"
                         ],
-                        "memberCanViewList": [
-                          "user-123"
-                        ],
                         "disabledTaskFields": [],
-                        "origin": "WebAppWithTemplate",
-                        "originRef": "template-123",
-                        "datecreated": "2026-06-23T09:00:00Z",
-                        "deleted": null,
-                        "taskSort": [
-                          "task-123"
-                        ]
+                        "dateCreated": "2026-06-23T09:00:00Z",
+                        "deleted": null
                       }
                     }
                   }
@@ -352,105 +333,59 @@
                 "default": {
                   "summary": "Example InsertChecklist request",
                   "value": {
-                    "userId": "user-123",
-                    "username": "Alex Tan",
                     "checklistData": {
-                      "id": "checklist-123",
-                      "number": 42,
-                      "subscriptionid": "sub-123",
-                      "tenantid": "tenant-123",
-                      "instanceId": "instance-123",
-                      "status": 1,
                       "title": "Monthly closing checklist",
                       "description": "Checklist for month-end finance tasks",
-                      "eventdateformated": "2026-06-30T00:00:00Z",
+                      "eventDateFormatted": "2026-06-30T00:00:00Z",
                       "requestor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
-                        "key": "calendar-standard",
-                        "text": "Standard business days"
+                        "id": "calendar-standard"
                       },
-                      "tag": [
-                        "High"
-                      ],
                       "tagIds": [
                         "tag-001"
                       ],
-                      "taskStatus": [
-                        "open"
-                      ],
-                      "memberCanViewList": [
-                        "user-123"
-                      ],
-                      "disabledTaskFields": [],
-                      "origin": "WebAppWithTemplate",
-                      "originRef": "template-123",
-                      "datecreated": "2026-06-23T09:00:00Z",
-                      "deleted": null,
-                      "taskSort": [
-                        "task-001"
-                      ]
+                      "disabledTaskFields": []
                     },
-                    "tasklistData": {
-                      "create": [
-                        {
-                          "id": "task-001",
-                          "task": "Review supporting documents",
-                          "number": 1,
-                          "subscription_id": "sub-123",
-                          "instance_id": "instance-123",
-                          "checklist_id": "checklist-123",
-                          "checklist_name": "Monthly closing checklist",
-                          "duedatenumber": 2,
-                          "tasktag": [
-                            "High"
-                          ],
-                          "taskTagIds": [
-                            "tag-001"
-                          ],
-                          "assignee": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "reviewer": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "attachment": [],
-                          "customFieldInput": [],
-                          "created_at": "2026-06-23T09:00:00Z",
-                          "deleted": null
-                        }
-                      ],
-                      "update": [],
-                      "delete": [],
-                      "noAction": []
-                    }
+                    "tasklistData": [
+                      {
+                        "task": "Review supporting documents",
+                        "dueDateNumber": 2,
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
+                        "assignee": [
+                          {
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          }
+                        ],
+                        "attachment": [],
+                        "customFieldInput": []
+                      }
+                    ]
                   }
                 }
               }
@@ -459,7 +394,10 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "InsertChecklist",
-        "description": "Public API concept mapped from the existing internal API."
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Checklists"
+        ]
       }
     },
     "/checklists/{checklistId}": {
@@ -486,40 +424,29 @@
                           }
                         ],
                         "number": 1,
-                        "eventdateformated": "2026-06-24T00:00:00",
+                        "eventDateFormatted": "2026-06-24T00:00:00",
                         "taskStatus": [
                           "open",
                           "dueWithinTwoDays"
                         ],
-                        "origin": null,
-                        "originRef": null,
                         "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
-                        "subscriptionid": null,
-                        "tenantid": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
+                        "subscriptionId": null,
+                        "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
                         "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
                         "title": "Checklist A1",
                         "description": "123",
-                        "status": 1,
+                        "status": "Submitted",
                         "calendar": {
-                          "key": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
-                          "text": "Working Days",
-                          "tag": null
+                          "id": "0779411d-3119-4bd5-bb0b-5958b7d8d8ce",
+                          "text": "Working Days"
                         },
-                        "tag": [],
                         "tagIds": [
                           "be4b6183-7324-559a-ee04-ab52aa8b1805"
                         ],
                         "follower": [],
                         "contributor": [],
-                        "taskSort": [
-                          "06e9f2e0-8b1f-4537-bbe4-73fb49ce2ad9"
-                        ],
-                        "memberCanViewList": [
-                          "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "e6674e96-7576-4eff-a46f-3d9c03871075"
-                        ],
                         "disabledTaskFields": [],
-                        "datecreated": "2026-06-22T04:27:19.3410906Z",
+                        "dateCreated": "2026-06-22T04:27:19.3410906Z",
                         "deleted": null
                       }
                     }
@@ -593,6 +520,9 @@
             },
             "example": "checklist-123"
           }
+        ],
+        "tags": [
+          "Checklists"
         ]
       },
       "put": {
@@ -623,13 +553,13 @@
                       "data": {
                         "id": "checklist-123",
                         "number": 42,
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
-                        "status": 1,
+                        "status": "Submitted",
                         "title": "Monthly closing checklist",
                         "description": "Checklist for month-end finance tasks",
-                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "eventDateFormatted": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
@@ -652,29 +582,18 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
                         ],
                         "taskStatus": [
                           "open"
                         ],
-                        "memberCanViewList": [
-                          "user-123"
-                        ],
                         "disabledTaskFields": [],
-                        "origin": "WebAppWithTemplate",
-                        "originRef": "template-123",
-                        "datecreated": "2026-06-23T09:00:00Z",
-                        "deleted": null,
-                        "taskSort": [
-                          "task-123"
-                        ]
+                        "dateCreated": "2026-06-23T09:00:00Z",
+                        "deleted": null
                       }
                     }
                   }
@@ -745,7 +664,6 @@
                     "description": "Updated description",
                     "requestor": [
                       {
-                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                         "displayName": "MOD Administrator",
                         "email": "admin@m365x80523924.onmicrosoft.com"
                       }
@@ -761,221 +679,9 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "PatchChecklist",
-        "description": "Public API concept mapped from the existing internal API."
-      }
-    },
-    "/checklistsV2/{checklistId}": {
-      "get": {
-        "summary": "Get checklist with tasks",
-        "operationId": "get-checklist-with-tasks",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "success": {
-                    "summary": "Example Get checklist with tasks response",
-                    "value": {
-                      "error": false,
-                      "message": "Success",
-                      "data": {
-                        "checklist": {
-                          "id": "checklist-123",
-                          "number": 42,
-                          "subscriptionid": "sub-123",
-                          "tenantid": "tenant-123",
-                          "instanceId": "instance-123",
-                          "status": 1,
-                          "title": "Monthly closing checklist",
-                          "description": "Checklist for month-end finance tasks",
-                          "eventdateformated": "2026-06-30T00:00:00Z",
-                          "requestor": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "follower": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "contributor": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "calendar": {
-                            "key": "calendar-standard",
-                            "text": "Standard business days"
-                          },
-                          "tag": [
-                            "High"
-                          ],
-                          "tagIds": [
-                            "tag-001"
-                          ],
-                          "taskStatus": [
-                            "open"
-                          ],
-                          "memberCanViewList": [
-                            "user-123"
-                          ],
-                          "disabledTaskFields": [],
-                          "origin": "WebAppWithTemplate",
-                          "originRef": "template-123",
-                          "datecreated": "2026-06-23T09:00:00Z",
-                          "deleted": null,
-                          "taskSort": [
-                            "task-123"
-                          ]
-                        },
-                        "tasks": [
-                          {
-                            "id": "task-123",
-                            "task": "Review supporting documents",
-                            "number": 1,
-                            "subscription_id": "sub-123",
-                            "instance_id": "instance-123",
-                            "checklist_id": "checklist-123",
-                            "checklist_name": "Monthly closing checklist",
-                            "duedatenumber": 2,
-                            "tasktag": [
-                              "High"
-                            ],
-                            "taskTagIds": [
-                              "tag-001"
-                            ],
-                            "assignee": [
-                              {
-                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "displayName": "MOD Administrator",
-                                "email": "admin@m365x80523924.onmicrosoft.com"
-                              }
-                            ],
-                            "reviewer": [
-                              {
-                                "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                                "displayName": "MOD Administrator",
-                                "email": "admin@m365x80523924.onmicrosoft.com"
-                              }
-                            ],
-                            "attachment": [
-                              {
-                                "id": "attachment-123",
-                                "fileName": "evidence.pdf",
-                                "url": "https://example.com/evidence.pdf",
-                                "contentType": "application/pdf"
-                              }
-                            ],
-                            "customFieldInput": [],
-                            "created_at": "2026-06-23T09:00:00Z",
-                            "status": "Open",
-                            "duedate": "2026-06-25T09:00:00Z",
-                            "deleted": null
-                          }
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Unauthorized response",
-                    "value": {
-                      "error": true,
-                      "message": "Unauthorized",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Forbidden response",
-                    "value": {
-                      "error": true,
-                      "message": "Forbidden",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Internal server error response",
-                    "value": {
-                      "error": true,
-                      "message": "Internal server error",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-implementation-status": "concept",
-        "x-existing-api": [
-          "GetChecklistById",
-          "GetListChecklistTask"
-        ],
-        "description": "Concept endpoint that returns checklist detail merged with task data.",
-        "parameters": [
-          {
-            "name": "checklistId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "checklist-123"
-          },
-          {
-            "name": "user_id",
-            "in": "query",
-            "required": false,
-            "description": "User identifier used by the mapped internal API.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "user-123"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of items to return.",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 10
-          }
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Checklists"
         ]
       }
     },
@@ -999,14 +705,10 @@
                           "id": "task-123",
                           "task": "Review supporting documents",
                           "number": 1,
-                          "subscription_id": "sub-123",
-                          "instance_id": "instance-123",
-                          "checklist_id": "checklist-123",
-                          "checklist_name": "Monthly closing checklist",
-                          "duedatenumber": 2,
-                          "tasktag": [
-                            "High"
-                          ],
+                          "instanceId": "instance-123",
+                          "checklistId": "checklist-123",
+                          "checklistName": "Monthly closing checklist",
+                          "dueDateNumber": 2,
                           "taskTagIds": [
                             "tag-001"
                           ],
@@ -1033,10 +735,11 @@
                             }
                           ],
                           "customFieldInput": [],
-                          "created_at": "2026-06-23T09:00:00Z",
+                          "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
-                          "duedate": "2026-06-25T09:00:00Z",
-                          "deleted": null
+                          "dueDate": "2026-06-25T09:00:00Z",
+                          "deleted": null,
+                          "groupId": "group-123"
                         }
                       ]
                     }
@@ -1140,6 +843,187 @@
             },
             "example": 10
           }
+        ],
+        "tags": [
+          "Tasks"
+        ]
+      },
+      "post": {
+        "summary": "Create checklist task",
+        "operationId": "post-checklist-task",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create task response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "task": "Review supporting documents",
+                        "number": 1,
+                        "instanceId": "instance-123",
+                        "checklistId": "checklist-123",
+                        "checklistName": "Monthly closing checklist",
+                        "dueDateNumber": 2,
+                        "taskTagIds": [
+                          "tag-001"
+                        ],
+                        "assignee": [
+                          {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          }
+                        ],
+                        "reviewer": [
+                          {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          }
+                        ],
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "createdAt": "2026-06-23T09:00:00Z",
+                        "status": "Open",
+                        "dueDate": "2026-06-25T09:00:00Z",
+                        "deleted": null,
+                        "groupId": "group-123"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Create task request",
+                  "value": {
+                    "userId": "user-123",
+                    "username": "Alex Tan",
+                    "tasklistData": {
+                      "create": [
+                        {
+                          "task": "Review supporting documents",
+                          "dueDateNumber": 2,
+                          "taskTagIds": [
+                            "tag-001"
+                          ],
+                          "assignee": [
+                            {
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
+                            }
+                          ],
+                          "reviewer": [
+                            {
+                              "displayName": "MOD Administrator",
+                              "email": "admin@m365x80523924.onmicrosoft.com"
+                            }
+                          ],
+                          "attachment": [
+                            {
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "status": "Open",
+                          "dueDate": "2026-06-25T09:00:00Z"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UpdateChecklist2",
+        "description": "Public task creation concept for a checklist, backed by UpdateChecklist2 using only tasklistData.create.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          }
+        ],
+        "tags": [
+          "Tasks"
         ]
       }
     },
@@ -1254,10 +1138,132 @@
             },
             "example": "checklist"
           }
+        ],
+        "tags": [
+          "Checklists"
+        ]
+      },
+      "post": {
+        "summary": "Create checklist activity",
+        "operationId": "post-checklist-activity",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create checklist activity response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "activity-123",
+                        "targetId": "checklist-123",
+                        "type": "checklist",
+                        "action": "comment",
+                        "comment": "Looks good",
+                        "createdBy": {
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
+                        },
+                        "createdAt": "2026-06-23T09:10:00Z"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Create checklist activity request",
+                  "value": {
+                    "comment": "Looks good",
+                    "userId": "user-123",
+                    "username": "Alex Tan"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "InsertComment",
+        "description": "Public API concept mapped from the existing internal API.",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "checklist-123"
+          }
+        ],
+        "tags": [
+          "Checklists"
         ]
       }
     },
-    "/tasks": {
+    "/my-tasks": {
       "get": {
         "responses": {
           "200": {
@@ -1277,14 +1283,10 @@
                             "id": "task-123",
                             "task": "Review supporting documents",
                             "number": 1,
-                            "subscription_id": "sub-123",
-                            "instance_id": "instance-123",
-                            "checklist_id": "checklist-123",
-                            "checklist_name": "Monthly closing checklist",
-                            "duedatenumber": 2,
-                            "tasktag": [
-                              "High"
-                            ],
+                            "instanceId": "instance-123",
+                            "checklistId": "checklist-123",
+                            "checklistName": "Monthly closing checklist",
+                            "dueDateNumber": 2,
                             "taskTagIds": [
                               "tag-001"
                             ],
@@ -1311,10 +1313,11 @@
                               }
                             ],
                             "customFieldInput": [],
-                            "created_at": "2026-06-23T09:00:00Z",
+                            "createdAt": "2026-06-23T09:00:00Z",
                             "status": "Open",
-                            "duedate": "2026-06-25T09:00:00Z",
-                            "deleted": null
+                            "dueDate": "2026-06-25T09:00:00Z",
+                            "deleted": null,
+                            "groupId": "group-123"
                           }
                         ]
                       }
@@ -1423,195 +1426,10 @@
             },
             "example": "Priority/High"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
-      },
-      "post": {
-        "summary": "Create task",
-        "operationId": "post-task",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "success": {
-                    "summary": "Example Create task response",
-                    "value": {
-                      "error": false,
-                      "message": "Success",
-                      "data": {
-                        "id": "task-123",
-                        "task": "Review supporting documents",
-                        "number": 1,
-                        "subscription_id": "sub-123",
-                        "instance_id": "instance-123",
-                        "checklist_id": "checklist-123",
-                        "checklist_name": "Monthly closing checklist",
-                        "duedatenumber": 2,
-                        "tasktag": [
-                          "High"
-                        ],
-                        "taskTagIds": [
-                          "tag-001"
-                        ],
-                        "assignee": [
-                          {
-                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "displayName": "MOD Administrator",
-                            "email": "admin@m365x80523924.onmicrosoft.com"
-                          }
-                        ],
-                        "reviewer": [
-                          {
-                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                            "displayName": "MOD Administrator",
-                            "email": "admin@m365x80523924.onmicrosoft.com"
-                          }
-                        ],
-                        "attachment": [
-                          {
-                            "id": "attachment-123",
-                            "fileName": "evidence.pdf",
-                            "url": "https://example.com/evidence.pdf",
-                            "contentType": "application/pdf"
-                          }
-                        ],
-                        "customFieldInput": [],
-                        "created_at": "2026-06-23T09:00:00Z",
-                        "status": "Open",
-                        "duedate": "2026-06-25T09:00:00Z",
-                        "deleted": null
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Unauthorized response",
-                    "value": {
-                      "error": true,
-                      "message": "Unauthorized",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Forbidden response",
-                    "value": {
-                      "error": true,
-                      "message": "Forbidden",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "default": {
-                    "summary": "Internal server error response",
-                    "value": {
-                      "error": true,
-                      "message": "Internal server error",
-                      "data": null
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "examples": {
-                "default": {
-                  "summary": "Example Create task request",
-                  "value": {
-                    "userId": "user-123",
-                    "username": "Alex Tan",
-                    "checklistData": {
-                      "id": "checklist-123",
-                      "status": 0
-                    },
-                    "tasklistData": {
-                      "create": [
-                        {
-                          "id": "task-123",
-                          "task": "Review supporting documents",
-                          "number": 1,
-                          "subscription_id": "sub-123",
-                          "instance_id": "instance-123",
-                          "checklist_id": "checklist-123",
-                          "checklist_name": "Monthly closing checklist",
-                          "duedatenumber": 2,
-                          "tasktag": [
-                            "High"
-                          ],
-                          "taskTagIds": [
-                            "tag-001"
-                          ],
-                          "assignee": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "reviewer": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "attachment": [
-                            {
-                              "id": "attachment-123",
-                              "fileName": "evidence.pdf",
-                              "url": "https://example.com/evidence.pdf",
-                              "contentType": "application/pdf"
-                            }
-                          ],
-                          "customFieldInput": [],
-                          "created_at": "2026-06-23T09:00:00Z",
-                          "status": "Open",
-                          "duedate": "2026-06-25T09:00:00Z",
-                          "deleted": null
-                        }
-                      ],
-                      "update": [],
-                      "delete": [],
-                      "noAction": []
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-implementation-status": "available",
-        "x-existing-api": "UpdateChecklist2",
-        "description": "Public task creation concept backed by UpdateChecklist2 using only tasklistData.create."
       }
     },
     "/tasks/{taskId}": {
@@ -1631,14 +1449,10 @@
                         "id": "task-123",
                         "task": "Review supporting documents",
                         "number": 1,
-                        "subscription_id": "sub-123",
-                        "instance_id": "instance-123",
-                        "checklist_id": "checklist-123",
-                        "checklist_name": "Monthly closing checklist",
-                        "duedatenumber": 2,
-                        "tasktag": [
-                          "High"
-                        ],
+                        "instanceId": "instance-123",
+                        "checklistId": "checklist-123",
+                        "checklistName": "Monthly closing checklist",
+                        "dueDateNumber": 2,
                         "taskTagIds": [
                           "tag-001"
                         ],
@@ -1665,10 +1479,11 @@
                           }
                         ],
                         "customFieldInput": [],
-                        "created_at": "2026-06-23T09:00:00Z",
+                        "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
-                        "duedate": "2026-06-25T09:00:00Z",
-                        "deleted": null
+                        "dueDate": "2026-06-25T09:00:00Z",
+                        "deleted": null,
+                        "groupId": "group-123"
                       }
                     }
                   }
@@ -1742,6 +1557,9 @@
             },
             "example": "task-123"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
       },
       "put": {
@@ -1773,14 +1591,10 @@
                         "id": "task-123",
                         "task": "Review supporting documents",
                         "number": 1,
-                        "subscription_id": "sub-123",
-                        "instance_id": "instance-123",
-                        "checklist_id": "checklist-123",
-                        "checklist_name": "Monthly closing checklist",
-                        "duedatenumber": 2,
-                        "tasktag": [
-                          "High"
-                        ],
+                        "instanceId": "instance-123",
+                        "checklistId": "checklist-123",
+                        "checklistName": "Monthly closing checklist",
+                        "dueDateNumber": 2,
                         "taskTagIds": [
                           "tag-001"
                         ],
@@ -1807,10 +1621,11 @@
                           }
                         ],
                         "customFieldInput": [],
-                        "created_at": "2026-06-23T09:00:00Z",
+                        "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
-                        "duedate": "2026-06-25T09:00:00Z",
-                        "deleted": null
+                        "dueDate": "2026-06-25T09:00:00Z",
+                        "deleted": null,
+                        "groupId": "group-123"
                       }
                     }
                   }
@@ -1877,47 +1692,40 @@
                 "default": {
                   "summary": "Example Update task request",
                   "value": {
-                    "id": "task-123",
                     "task": "Review supporting documents",
                     "number": 1,
-                    "subscription_id": "sub-123",
-                    "instance_id": "instance-123",
-                    "checklist_id": "checklist-123",
-                    "checklist_name": "Monthly closing checklist",
-                    "duedatenumber": 2,
-                    "tasktag": [
-                      "High"
-                    ],
+                    "instanceId": "instance-123",
+                    "checklistId": "checklist-123",
+                    "checklistName": "Monthly closing checklist",
+                    "dueDateNumber": 2,
                     "taskTagIds": [
                       "tag-001"
                     ],
                     "assignee": [
                       {
-                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                         "displayName": "MOD Administrator",
                         "email": "admin@m365x80523924.onmicrosoft.com"
                       }
                     ],
                     "reviewer": [
                       {
-                        "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                         "displayName": "MOD Administrator",
                         "email": "admin@m365x80523924.onmicrosoft.com"
                       }
                     ],
                     "attachment": [
                       {
-                        "id": "attachment-123",
                         "fileName": "evidence.pdf",
                         "url": "https://example.com/evidence.pdf",
                         "contentType": "application/pdf"
                       }
                     ],
                     "customFieldInput": [],
-                    "created_at": "2026-06-23T09:00:00Z",
+                    "createdAt": "2026-06-23T09:00:00Z",
                     "status": "Open",
-                    "duedate": "2026-06-25T09:00:00Z",
-                    "deleted": null
+                    "dueDate": "2026-06-25T09:00:00Z",
+                    "deleted": null,
+                    "groupId": "group-123"
                   }
                 }
               }
@@ -1929,7 +1737,10 @@
           "PatchTask",
           "UpdateChecklist2"
         ],
-        "description": "Public task update concept. Submitted tasks map to PatchTask; draft task updates map to UpdateChecklist2."
+        "description": "Public task update concept. Submitted tasks map to PatchTask; draft task updates map to UpdateChecklist2.",
+        "tags": [
+          "Tasks"
+        ]
       }
     },
     "/tasks/{taskId}/attachments": {
@@ -2025,6 +1836,9 @@
             },
             "example": "task-123"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
       }
     },
@@ -2139,6 +1953,9 @@
             },
             "example": "task"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
       },
       "post": {
@@ -2233,8 +2050,6 @@
                 "default": {
                   "summary": "Example Create task activity request",
                   "value": {
-                    "type": "task",
-                    "id": "task-123",
                     "comment": "Looks good",
                     "userId": "user-123",
                     "username": "Alex Tan"
@@ -2256,17 +2071,10 @@
               "type": "string"
             },
             "example": "task-123"
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "required": false,
-            "description": "Activity target type.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "task"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
       }
     },
@@ -2286,12 +2094,63 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "instance-123",
-                        "tenantId": "tenant-123",
-                        "groupId": "group-123",
-                        "channelId": "channel-123",
-                        "title": "Finance Operations",
-                        "enabled": true
+                        "id": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
+                        "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
+                        "entityId": null,
+                        "teamsId": null,
+                        "channelId": "19:IO8j2dfAOt_xRaNYZAKG31XLbvE-rcLhzgSc2PpMgoI1@thread.tacv2",
+                        "name": "Instance A1",
+                        "color": null,
+                        "enabled": true,
+                        "deleted": false,
+                        "updatedAt": "2026-06-26T02:23:41.3727300Z",
+                        "deletedAt": null,
+                        "isWizardShown": false,
+                        "standardFields": [
+                          {
+                            "id": "standardField_reviewer",
+                            "title": "Reviewer",
+                            "iconName": "People",
+                            "isEnabled": true
+                          },
+                          {
+                            "id": "standardField_dueDate",
+                            "title": "Due Date",
+                            "iconName": "Calendar",
+                            "isEnabled": true
+                          },
+                          {
+                            "id": "standardField_taskTag",
+                            "title": "Task Tag",
+                            "iconName": "Tag",
+                            "isEnabled": true
+                          }
+                        ],
+                        "customFields": [],
+                        "inactiveCustomFields": [],
+                        "userList": {
+                          "members": [
+                            {
+                              "id": "e6674e96-7576-4eff-a46f-3d9c03871075",
+                              "imageInitials": "AV",
+                              "secondaryText": "AdeleV@M365x80523924.OnMicrosoft.com",
+                              "text": "Adele Vance"
+                            }
+                          ],
+                          "owners": [
+                            {
+                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                              "imageInitials": "MA",
+                              "secondaryText": "admin@m365x80523924.onmicrosoft.com",
+                              "text": "MOD Administrator"
+                            }
+                          ]
+                        },
+                        "userMode": null,
+                        "isNewUserManagement": true,
+                        "userManagementMode": "manual",
+                        "userMembershipMode": "public",
+                        "groupId": "1b9c23ec-9480-48c9-b646-2ed35cf09982"
                       }
                     }
                   }
@@ -2353,7 +2212,10 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetInstanceById",
-        "description": "Public API concept mapped from the existing internal API."
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Instance"
+        ]
       }
     },
     "/tags/checklists": {
@@ -2462,6 +2324,9 @@
             },
             "example": "Priority"
           }
+        ],
+        "tags": [
+          "Tags"
         ]
       }
     },
@@ -2571,6 +2436,9 @@
             },
             "example": "Priority"
           }
+        ],
+        "tags": [
+          "Tags"
         ]
       }
     },
@@ -2663,7 +2531,10 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetListMasterCalendar",
-        "description": "Public API concept mapped from the existing internal API."
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Calendars"
+        ]
       }
     },
     "/users": {
@@ -2769,7 +2640,35 @@
         "summary": "List users",
         "operationId": "get-users",
         "x-implementation-status": "unavailable",
-        "description": "Public API concept endpoint. No equivalent existing internal API is currently available."
+        "description": "Returns all users in the current instance. Use role=member or role=owner to filter by membership role.",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "role",
+            "in": "query",
+            "required": false,
+            "description": "Optional user role filter. Omit to return all users.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "member",
+                "owner"
+              ]
+            },
+            "examples": {
+              "member": {
+                "summary": "Members only",
+                "value": "member"
+              },
+              "owner": {
+                "summary": "Owners only",
+                "value": "owner"
+              }
+            }
+          }
+        ]
       }
     },
     "/recurring-checklists": {
@@ -2790,8 +2689,8 @@
                       "data": [
                         {
                           "id": "recurring-checklist-123",
-                          "subscriptionid": "sub-123",
-                          "tenantid": "tenant-123",
+                          "subscriptionId": "sub-123",
+                          "tenantId": "tenant-123",
                           "instanceId": "instance-123",
                           "title": "Monthly closing checklist",
                           "description": "Recurring month-end checklist",
@@ -2817,17 +2716,11 @@
                             }
                           ],
                           "calendar": {
-                            "key": "calendar-standard",
+                            "id": "calendar-standard",
                             "text": "Standard business days"
                           },
-                          "tag": [
-                            "High"
-                          ],
                           "tagIds": [
                             "tag-001"
-                          ],
-                          "taskSort": [
-                            "task-123"
                           ],
                           "repeatOption": "monthly",
                           "beforeEventDateNumber": 0,
@@ -2905,7 +2798,10 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "GetRecurringChecklists",
-        "description": "Public API concept mapped from the existing internal API."
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Recurring Checklists"
+        ]
       },
       "post": {
         "summary": "Create recurring checklist",
@@ -2923,8 +2819,8 @@
                       "message": "Success",
                       "data": {
                         "id": "recurring-checklist-123",
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -2950,17 +2846,11 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
-                        ],
-                        "taskSort": [
-                          "task-123"
                         ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
@@ -3043,45 +2933,31 @@
                   "summary": "Example InsertRecurringChecklist request",
                   "value": {
                     "checklist": {
-                      "id": "checklist-123",
-                      "subscriptionid": "sub-123",
-                      "tenantid": "tenant-123",
-                      "instanceId": "instance-123",
                       "title": "Monthly closing checklist",
                       "description": "Checklist for month-end finance tasks",
                       "requestor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
-                        "key": "calendar-standard",
-                        "text": "Standard business days"
+                        "id": "calendar-standard"
                       },
-                      "tag": [
-                        "High"
-                      ],
                       "tagIds": [
                         "tag-001"
-                      ],
-                      "taskSort": [
-                        "task-001"
                       ],
                       "disabledTaskFields": [],
                       "repeatOption": "monthly",
@@ -3091,18 +2967,6 @@
                         "interval": 1
                       },
                       "customDate": [],
-                      "activeActualDates": [
-                        {
-                          "date": "2026-06-30T00:00:00Z",
-                          "executed": false
-                        }
-                      ],
-                      "filteredActiveActualDates": [
-                        {
-                          "date": "2026-06-30T00:00:00Z",
-                          "executed": false
-                        }
-                      ],
                       "isDisabled": false
                     },
                     "templateId": "template-123",
@@ -3115,7 +2979,10 @@
         },
         "x-implementation-status": "available",
         "x-existing-api": "InsertRecurringChecklist",
-        "description": "Public API concept mapped from the existing internal API."
+        "description": "Public API concept mapped from the existing internal API.",
+        "tags": [
+          "Recurring Checklists"
+        ]
       }
     },
     "/recurring-checklists/{checklistId}": {
@@ -3135,8 +3002,8 @@
                       "message": "Success",
                       "data": {
                         "id": "recurring-checklist-123",
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -3162,17 +3029,11 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
-                        ],
-                        "taskSort": [
-                          "task-123"
                         ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
@@ -3260,6 +3121,9 @@
             },
             "example": "recurring-checklist-123"
           }
+        ],
+        "tags": [
+          "Recurring Checklists"
         ]
       },
       "put": {
@@ -3278,8 +3142,8 @@
                       "message": "Success",
                       "data": {
                         "id": "recurring-checklist-123",
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -3305,17 +3169,11 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
-                        ],
-                        "taskSort": [
-                          "task-123"
                         ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
@@ -3399,45 +3257,35 @@
                   "value": {
                     "username": "Alex Tan",
                     "checklist": {
-                      "id": "recurring-checklist-123",
-                      "subscriptionid": "sub-123",
-                      "tenantid": "tenant-123",
+                      "subscriptionId": "sub-123",
+                      "tenantId": "tenant-123",
                       "instanceId": "instance-123",
                       "title": "Monthly closing checklist",
                       "description": "Recurring month-end checklist",
                       "requestor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "follower": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "contributor": [
                         {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         }
                       ],
                       "calendar": {
-                        "key": "calendar-standard",
+                        "id": "calendar-standard",
                         "text": "Standard business days"
                       },
-                      "tag": [
-                        "High"
-                      ],
                       "tagIds": [
                         "tag-001"
-                      ],
-                      "taskSort": [
-                        "task-123"
                       ],
                       "repeatOption": "monthly",
                       "beforeEventDateNumber": 0,
@@ -3457,47 +3305,40 @@
                     "tasks": {
                       "create": [
                         {
-                          "id": "task-123",
                           "task": "Review supporting documents",
                           "number": 1,
-                          "subscription_id": "sub-123",
-                          "instance_id": "instance-123",
-                          "checklist_id": "checklist-123",
-                          "checklist_name": "Monthly closing checklist",
-                          "duedatenumber": 2,
-                          "tasktag": [
-                            "High"
-                          ],
+                          "instanceId": "instance-123",
+                          "checklistId": "checklist-123",
+                          "checklistName": "Monthly closing checklist",
+                          "dueDateNumber": 2,
                           "taskTagIds": [
                             "tag-001"
                           ],
                           "assignee": [
                             {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                               "displayName": "MOD Administrator",
                               "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "reviewer": [
                             {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
                               "displayName": "MOD Administrator",
                               "email": "admin@m365x80523924.onmicrosoft.com"
                             }
                           ],
                           "attachment": [
                             {
-                              "id": "attachment-123",
                               "fileName": "evidence.pdf",
                               "url": "https://example.com/evidence.pdf",
                               "contentType": "application/pdf"
                             }
                           ],
                           "customFieldInput": [],
-                          "created_at": "2026-06-23T09:00:00Z",
+                          "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
-                          "duedate": "2026-06-25T09:00:00Z",
-                          "deleted": null
+                          "dueDate": "2026-06-25T09:00:00Z",
+                          "deleted": null,
+                          "groupId": "group-123"
                         }
                       ],
                       "update": [],
@@ -3523,6 +3364,9 @@
             },
             "example": "recurring-checklist-123"
           }
+        ],
+        "tags": [
+          "Recurring Checklists"
         ]
       }
     },
@@ -3605,21 +3449,6 @@
             }
           }
         },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "examples": {
-                "default": {
-                  "summary": "Example UploadTaskAttachment request",
-                  "value": {
-                    "id": "task-001",
-                    "checklist_id": "checklist-123"
-                  }
-                }
-              }
-            }
-          }
-        },
         "x-implementation-status": "available",
         "x-existing-api": "UploadTaskAttachment",
         "description": "Public API concept mapped from the existing internal API.",
@@ -3633,13 +3462,16 @@
             },
             "example": "task-123"
           }
+        ],
+        "tags": [
+          "Tasks"
         ]
       }
     },
     "/checklists/{checklistId}/submit": {
-      "put": {
+      "patch": {
         "summary": "Submit checklist",
-        "operationId": "put-checklist-submit",
+        "operationId": "patch-checklist-submit",
         "responses": {
           "200": {
             "description": "",
@@ -3654,13 +3486,13 @@
                       "data": {
                         "id": "checklist-123",
                         "number": 42,
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
-                        "status": 1,
+                        "status": "Submitted",
                         "title": "Monthly closing checklist",
                         "description": "Checklist for month-end finance tasks",
-                        "eventdateformated": "2026-06-30T00:00:00Z",
+                        "eventDateFormatted": "2026-06-30T00:00:00Z",
                         "requestor": [
                           {
                             "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
@@ -3683,12 +3515,9 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
                         ],
@@ -3699,13 +3528,8 @@
                           "user-123"
                         ],
                         "disabledTaskFields": [],
-                        "origin": "WebAppWithTemplate",
-                        "originRef": "template-123",
-                        "datecreated": "2026-06-23T09:00:00Z",
-                        "deleted": null,
-                        "taskSort": [
-                          "task-123"
-                        ]
+                        "dateCreated": "2026-06-23T09:00:00Z",
+                        "deleted": null
                       }
                     }
                   }
@@ -3765,127 +3589,6 @@
             }
           }
         },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "examples": {
-                "default": {
-                  "summary": "Example Submit checklist request",
-                  "value": {
-                    "userId": "user-123",
-                    "username": "Alex Tan",
-                    "checklistData": {
-                      "id": "checklist-123",
-                      "number": 42,
-                      "subscriptionid": "sub-123",
-                      "tenantid": "tenant-123",
-                      "instanceId": "instance-123",
-                      "status": 1,
-                      "title": "Monthly closing checklist",
-                      "description": "Checklist for month-end finance tasks",
-                      "eventdateformated": "2026-06-30T00:00:00Z",
-                      "requestor": [
-                        {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "displayName": "MOD Administrator",
-                          "email": "admin@m365x80523924.onmicrosoft.com"
-                        }
-                      ],
-                      "follower": [
-                        {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "displayName": "MOD Administrator",
-                          "email": "admin@m365x80523924.onmicrosoft.com"
-                        }
-                      ],
-                      "contributor": [
-                        {
-                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                          "displayName": "MOD Administrator",
-                          "email": "admin@m365x80523924.onmicrosoft.com"
-                        }
-                      ],
-                      "calendar": {
-                        "key": "calendar-standard",
-                        "text": "Standard business days"
-                      },
-                      "tag": [
-                        "High"
-                      ],
-                      "tagIds": [
-                        "tag-001"
-                      ],
-                      "taskStatus": [
-                        "open"
-                      ],
-                      "memberCanViewList": [
-                        "user-123"
-                      ],
-                      "disabledTaskFields": [],
-                      "origin": "WebAppWithTemplate",
-                      "originRef": "template-123",
-                      "datecreated": "2026-06-23T09:00:00Z",
-                      "deleted": null,
-                      "taskSort": [
-                        "task-123"
-                      ]
-                    },
-                    "tasklistData": {
-                      "create": [
-                        {
-                          "id": "task-123",
-                          "task": "Review supporting documents",
-                          "number": 1,
-                          "subscription_id": "sub-123",
-                          "instance_id": "instance-123",
-                          "checklist_id": "checklist-123",
-                          "checklist_name": "Monthly closing checklist",
-                          "duedatenumber": 2,
-                          "tasktag": [
-                            "High"
-                          ],
-                          "taskTagIds": [
-                            "tag-001"
-                          ],
-                          "assignee": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "reviewer": [
-                            {
-                              "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
-                              "displayName": "MOD Administrator",
-                              "email": "admin@m365x80523924.onmicrosoft.com"
-                            }
-                          ],
-                          "attachment": [
-                            {
-                              "id": "attachment-123",
-                              "fileName": "evidence.pdf",
-                              "url": "https://example.com/evidence.pdf",
-                              "contentType": "application/pdf"
-                            }
-                          ],
-                          "customFieldInput": [],
-                          "created_at": "2026-06-23T09:00:00Z",
-                          "status": "Open",
-                          "duedate": "2026-06-25T09:00:00Z",
-                          "deleted": null
-                        }
-                      ],
-                      "update": [],
-                      "delete": [],
-                      "noAction": []
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "x-implementation-status": "available",
         "x-existing-api": "UpdateSubmitChecklist",
         "description": "Public API concept mapped from the existing internal API.",
@@ -3909,13 +3612,16 @@
             },
             "example": "true"
           }
+        ],
+        "tags": [
+          "Checklists"
         ]
       }
     },
     "/tasks/{taskId}/status": {
-      "put": {
+      "patch": {
         "summary": "Update task status",
-        "operationId": "put-task-status",
+        "operationId": "patch-task-status",
         "parameters": [
           {
             "name": "taskId",
@@ -3942,14 +3648,10 @@
                         "id": "task-123",
                         "task": "Review supporting documents",
                         "number": 1,
-                        "subscription_id": "sub-123",
-                        "instance_id": "instance-123",
-                        "checklist_id": "checklist-123",
-                        "checklist_name": "Monthly closing checklist",
-                        "duedatenumber": 2,
-                        "tasktag": [
-                          "High"
-                        ],
+                        "instanceId": "instance-123",
+                        "checklistId": "checklist-123",
+                        "checklistName": "Monthly closing checklist",
+                        "dueDateNumber": 2,
                         "taskTagIds": [
                           "tag-001"
                         ],
@@ -3976,10 +3678,11 @@
                           }
                         ],
                         "customFieldInput": [],
-                        "created_at": "2026-06-23T09:00:00Z",
+                        "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Resolved",
-                        "duedate": "2026-06-25T09:00:00Z",
-                        "deleted": null
+                        "dueDate": "2026-06-25T09:00:00Z",
+                        "deleted": null,
+                        "groupId": "group-123"
                       }
                     }
                   }
@@ -4056,13 +3759,16 @@
         },
         "x-implementation-status": "concept",
         "x-existing-api": "PatchTask",
-        "description": "Status-only public task update concept backed by PatchTask."
+        "description": "Status-only public task update concept backed by PatchTask.",
+        "tags": [
+          "Tasks"
+        ]
       }
     },
     "/recurring-checklist/{checklistId}/status": {
-      "put": {
+      "patch": {
         "summary": "Update recurring checklist status",
-        "operationId": "put-recurring-checklist-status",
+        "operationId": "patch-recurring-checklist-status",
         "responses": {
           "200": {
             "description": "",
@@ -4076,8 +3782,8 @@
                       "message": "Success",
                       "data": {
                         "id": "recurring-checklist-123",
-                        "subscriptionid": "sub-123",
-                        "tenantid": "tenant-123",
+                        "subscriptionId": "sub-123",
+                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -4103,17 +3809,11 @@
                           }
                         ],
                         "calendar": {
-                          "key": "calendar-standard",
+                          "id": "calendar-standard",
                           "text": "Standard business days"
                         },
-                        "tag": [
-                          "High"
-                        ],
                         "tagIds": [
                           "tag-001"
-                        ],
-                        "taskSort": [
-                          "task-123"
                         ],
                         "repeatOption": "monthly",
                         "beforeEventDateNumber": 0,
@@ -4215,6 +3915,9 @@
             },
             "example": "recurring-checklist-123"
           }
+        ],
+        "tags": [
+          "Recurring Checklists"
         ]
       }
     }
@@ -4267,6 +3970,29 @@
     },
     {
       "apiKeyQuery": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Checklists"
+    },
+    {
+      "name": "Tasks"
+    },
+    {
+      "name": "Recurring Checklists"
+    },
+    {
+      "name": "Tags"
+    },
+    {
+      "name": "Calendars"
+    },
+    {
+      "name": "Users"
+    },
+    {
+      "name": "Instance"
     }
   ]
 }
