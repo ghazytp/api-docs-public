@@ -2011,14 +2011,10 @@
                       "data": {
                         "id": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
                         "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
-                        "entityId": null,
-                        "teamsId": null,
                         "channelId": "19:IO8j2dfAOt_xRaNYZAKG31XLbvE-rcLhzgSc2PpMgoI1@thread.tacv2",
                         "name": "Instance A1",
                         "color": null,
-                        "enabled": true,
                         "updatedAt": "2026-06-26T02:23:41.3727300Z",
-                        "deletedAt": null,
                         "isWizardShown": false,
                         "standardFields": [
                           {
@@ -2060,9 +2056,6 @@
                             }
                           ]
                         },
-                        "userMode": null,
-                        "isNewUserManagement": true,
-                        "userManagementMode": "manual",
                         "userMembershipMode": "public",
                         "groupId": "1b9c23ec-9480-48c9-b646-2ed35cf09982"
                       }
@@ -3067,12 +3060,6 @@
                           "interval": 1
                         },
                         "customDate": [],
-                        "activeActualDates": [
-                          {
-                            "date": "2026-06-30T00:00:00Z",
-                            "executed": false
-                          }
-                        ],
                         "isDisabled": false,
                         "tags": [
                           {
