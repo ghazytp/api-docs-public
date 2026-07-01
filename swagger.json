@@ -187,7 +187,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "checklist-123",
+                        "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
@@ -484,9 +484,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           }
         ],
         "tags": ["Checklists"]
@@ -500,9 +501,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           }
         ],
         "responses": {
@@ -517,7 +519,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "checklist-123",
+                        "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
@@ -664,11 +666,11 @@
                       "message": "Success",
                       "data": [
                         {
-                          "id": "task-123",
+                          "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                           "name": "Review supporting documents",
                           "taskNo": 1,
                           "instanceId": "instance-123",
-                          "checklistId": "checklist-123",
+                          "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                           "checklistName": "Monthly closing checklist",
                           "dueDateNumber": 2,
                           "assignee": {
@@ -780,9 +782,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           },
           {
             "name": "id",
@@ -823,11 +826,11 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "task-123",
+                        "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "name": "Review supporting documents",
                         "checklistNo": 1,
                         "instanceId": "instance-123",
-                        "checklistId": "checklist-123",
+                        "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistName": "Monthly closing checklist",
                         "dueDateNumber": 2,
                         "assignee": {
@@ -998,9 +1001,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           }
         ],
         "tags": ["Tasks"]
@@ -1024,7 +1028,7 @@
                       "data": [
                         {
                           "id": "activity-123",
-                          "targetId": "checklist-123",
+                          "targetId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                           "type": "checklist",
                           "action": "comment",
                           "comment": "Looks good",
@@ -1103,9 +1107,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           },
           {
             "name": "type",
@@ -1136,7 +1141,7 @@
                       "message": "Success",
                       "data": {
                         "id": "activity-123",
-                        "targetId": "checklist-123",
+                        "targetId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "type": "checklist",
                         "action": "comment",
                         "comment": "Looks good",
@@ -1230,9 +1235,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           }
         ],
         "tags": ["Checklists"]
@@ -1255,11 +1261,11 @@
                         "continuationToken": "next-token",
                         "data": [
                           {
-                            "id": "task-123",
+                            "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                             "name": "Review supporting documents",
                             "taskNo": 1,
                             "instanceId": "instance-123",
-                            "checklistId": "checklist-123",
+                            "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                             "checklistName": "Monthly closing checklist",
                             "dueDateNumber": 2,
                             "assignee": {
@@ -1428,11 +1434,11 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "task-123",
+                        "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "name": "Review supporting documents",
                         "checklistNo": 1,
                         "instanceId": "instance-123",
-                        "checklistId": "checklist-123",
+                        "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistName": "Monthly closing checklist",
                         "dueDateNumber": 2,
                         "assignee": {
@@ -1544,9 +1550,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "tags": ["Tasks"]
@@ -1560,9 +1567,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "responses": {
@@ -1577,11 +1585,11 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "task-123",
+                        "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "name": "Review supporting documents",
                         "taskNo": 1,
                         "instanceId": "instance-123",
-                        "checklistId": "checklist-123",
+                        "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistName": "Monthly closing checklist",
                         "dueDateNumber": 2,
                         "assignee": {
@@ -1693,7 +1701,7 @@
                     "name": "Review supporting documents",
                     "taskNo": 1,
                     "instanceId": "instance-123",
-                    "checklistId": "checklist-123",
+                    "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                     "checklistName": "Monthly closing checklist",
                     "dueDateNumber": 2,
                     "assignee": {
@@ -1834,9 +1842,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "tags": ["Tasks"]
@@ -1860,7 +1869,7 @@
                       "data": [
                         {
                           "id": "activity-123",
-                          "targetId": "task-123",
+                          "targetId": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                           "type": "task",
                           "action": "comment",
                           "comment": "Looks good",
@@ -1939,9 +1948,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           },
           {
             "name": "type",
@@ -1972,7 +1982,7 @@
                       "message": "Success",
                       "data": {
                         "id": "activity-123",
-                        "targetId": "task-123",
+                        "targetId": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "type": "task",
                         "action": "comment",
                         "comment": "Looks good",
@@ -2066,9 +2076,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "tags": ["Tasks"]
@@ -2516,7 +2527,6 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["error", "message", "data"],
                   "properties": {
                     "error": {
                       "type": "boolean"
@@ -2527,7 +2537,7 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/User"
+                        "$ref": "#/components/schemas/IUser"
                       }
                     }
                   }
@@ -2649,7 +2659,7 @@
                       "message": "Success",
                       "data": [
                         {
-                          "id": "recurring-checklist-123",
+                          "id": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                           "subscriptionId": "sub-123",
                           "instanceId": "instance-123",
                           "title": "Monthly closing checklist",
@@ -2777,7 +2787,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "recurring-checklist-123",
+                        "id": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
@@ -2963,7 +2973,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "recurring-checklist-123",
+                        "id": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
@@ -3079,9 +3089,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "recurring-checklist-123"
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
           }
         ],
         "tags": ["Recurring Checklists"]
@@ -3101,7 +3112,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "recurring-checklist-123",
+                        "id": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
@@ -3265,7 +3276,7 @@
                           "name": "Review supporting documents",
                           "checklistNo": 1,
                           "instanceId": "instance-123",
-                          "checklistId": "checklist-123",
+                          "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                           "checklistName": "Monthly closing checklist",
                           "dueDateNumber": 2,
                           "assignee": {
@@ -3328,9 +3339,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "recurring-checklist-123"
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
           }
         ],
         "tags": ["Recurring Checklists"]
@@ -3353,11 +3365,11 @@
                       "message": "Success",
                       "data": [
                         {
-                          "id": "task-123",
+                          "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                           "name": "Review supporting documents",
                           "taskNo": 1,
                           "instanceId": "instance-123",
-                          "checklistId": "recurring-checklist-123",
+                          "checklistId": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                           "checklistName": "Monthly closing checklist",
                           "dueDateNumber": 2,
                           "assignee": {
@@ -3468,9 +3480,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "recurring-checklist-123"
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
           },
           {
             "name": "limit",
@@ -3500,11 +3513,11 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "task-123",
+                        "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "name": "Review supporting documents",
                         "checklistNo": 1,
                         "instanceId": "instance-123",
-                        "checklistId": "recurring-checklist-123",
+                        "checklistId": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                         "checklistName": "Monthly closing checklist",
                         "dueDateNumber": 2,
                         "assignee": {
@@ -3620,7 +3633,7 @@
                           "name": "Review supporting documents",
                           "checklistNo": 1,
                           "instanceId": "instance-123",
-                          "checklistId": "recurring-checklist-123",
+                          "checklistId": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                           "checklistName": "Monthly closing checklist",
                           "dueDateNumber": 2,
                           "assignee": {
@@ -3683,9 +3696,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "recurring-checklist-123"
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
           }
         ],
         "tags": ["Tasks"]
@@ -3779,9 +3793,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "tags": ["Tasks"]
@@ -3803,7 +3818,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "checklist-123",
+                        "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
@@ -3910,9 +3925,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "checklist-123"
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
           },
           {
             "name": "isBackend",
@@ -3938,9 +3954,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "task-123"
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
           }
         ],
         "responses": {
@@ -3955,11 +3972,11 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "task-123",
+                        "id": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8",
                         "name": "Review supporting documents",
                         "checklistNo": 1,
                         "instanceId": "instance-123",
-                        "checklistId": "checklist-123",
+                        "checklistId": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "checklistName": "Monthly closing checklist",
                         "dueDateNumber": 2,
                         "assignee": {
@@ -4098,7 +4115,7 @@
                       "error": false,
                       "message": "Success",
                       "data": {
-                        "id": "recurring-checklist-123",
+                        "id": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1",
                         "subscriptionId": "sub-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
@@ -4228,9 +4245,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             },
-            "example": "recurring-checklist-123"
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
           }
         ],
         "tags": ["Recurring Checklists"]
@@ -4239,9 +4257,8 @@
   },
   "components": {
     "schemas": {
-      "User": {
+      "IUser": {
         "type": "object",
-        "required": ["id", "displayName", "email"],
         "properties": {
           "id": {
             "type": "string",
@@ -4258,6 +4275,544 @@
             "format": "email",
             "description": "User email address.",
             "example": "admin@m365x80523924.onmicrosoft.com"
+          }
+        }
+      },
+      "ITagItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "tag-001"
+          },
+          "text": {
+            "type": "string",
+            "example": "High"
+          }
+        }
+      },
+      "ITagCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "tag-category-123"
+          },
+          "name": {
+            "type": "string",
+            "example": "Priority"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ITagItem"
+            }
+          }
+        }
+      },
+      "ICalendarRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "calendar-standard"
+          },
+          "text": {
+            "type": "string",
+            "example": "Standard business days"
+          }
+        }
+      },
+      "ICalendar": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "calendar-123"
+          },
+          "calendarname": {
+            "type": "string",
+            "example": "Business days"
+          },
+          "days": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "example": [1, 2, 3, 4, 5]
+          },
+          "publicholiday": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "IAttachment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "attachment-123"
+          },
+          "fileName": {
+            "type": "string",
+            "example": "evidence.pdf"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://example.com/evidence.pdf"
+          },
+          "contentType": {
+            "type": "string",
+            "example": "application/pdf"
+          }
+        }
+      },
+      "ICustomFieldInput": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56"
+          },
+          "value": {
+            "oneOf": [
+              {
+                "type": "string",
+                "example": "Hello World"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": ["option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"]
+              }
+            ]
+          }
+        }
+      },
+      "ITask": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0f2f96f6-0a4d-43c1-b6a7-52172e93e2f8"
+          },
+          "name": {
+            "type": "string",
+            "example": "Review supporting documents"
+          },
+          "taskNo": {
+            "type": "integer",
+            "example": 1
+          },
+          "checklistNo": {
+            "type": "integer",
+            "example": 1
+          },
+          "instanceId": {
+            "type": "string",
+            "example": "instance-123"
+          },
+          "checklistId": {
+            "type": "string",
+            "format": "uuid",
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
+          },
+          "checklistName": {
+            "type": "string",
+            "example": "Monthly closing checklist"
+          },
+          "dueDateNumber": {
+            "type": "integer",
+            "example": 2
+          },
+          "assignee": {
+            "$ref": "#/components/schemas/IUser"
+          },
+          "reviewer": {
+            "$ref": "#/components/schemas/IUser"
+          },
+          "attachment": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IAttachment"
+            }
+          },
+          "customFieldInput": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ICustomFieldInput"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-23T09:00:00Z"
+          },
+          "status": {
+            "type": "string",
+            "example": "Open"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-25T09:00:00Z"
+          },
+          "groupId": {
+            "type": "string",
+            "example": "group-123"
+          },
+          "taskTags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ITagItem"
+            }
+          }
+        }
+      },
+      "IActivity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "activity-123"
+          },
+          "targetId": {
+            "type": "string",
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
+          },
+          "type": {
+            "type": "string",
+            "example": "checklist"
+          },
+          "action": {
+            "type": "string",
+            "example": "comment"
+          },
+          "comment": {
+            "type": "string",
+            "example": "Looks good"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/IUser"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-23T09:00:00Z"
+          }
+        }
+      },
+      "IChecklist": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "d234be3d-7bf5-4670-b6f0-05924aa3a07a"
+          },
+          "checklistNo": {
+            "type": "integer",
+            "example": 42
+          },
+          "subscriptionId": {
+            "type": "string",
+            "nullable": true,
+            "example": "sub-123"
+          },
+          "instanceId": {
+            "type": "string",
+            "example": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94"
+          },
+          "groupId": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "status": {
+            "type": "string",
+            "example": "Submitted"
+          },
+          "title": {
+            "type": "string",
+            "example": "Monthly closing checklist"
+          },
+          "description": {
+            "type": "string",
+            "example": "Checklist for month-end finance tasks"
+          },
+          "eventDate": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-30T00:00:00Z"
+          },
+          "requestor": {
+            "$ref": "#/components/schemas/IUser"
+          },
+          "follower": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IUser"
+            }
+          },
+          "contributor": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IUser"
+            }
+          },
+          "calendar": {
+            "$ref": "#/components/schemas/ICalendarRef"
+          },
+          "disabledTaskFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-23T09:00:00Z"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ITagItem"
+            }
+          }
+        }
+      },
+      "IRecurringSchedule": {
+        "type": "object",
+        "properties": {
+          "frequency": {
+            "type": "string",
+            "example": "monthly"
+          },
+          "interval": {
+            "type": "integer",
+            "example": 1
+          }
+        }
+      },
+      "IActiveActualDate": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-30T00:00:00Z"
+          },
+          "executed": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
+      "IRecurringChecklist": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "6f04491e-9ad6-4ac1-9f31-8dd9ed32c9a1"
+          },
+          "subscriptionId": {
+            "type": "string",
+            "example": "sub-123"
+          },
+          "instanceId": {
+            "type": "string",
+            "example": "instance-123"
+          },
+          "title": {
+            "type": "string",
+            "example": "Monthly closing checklist"
+          },
+          "description": {
+            "type": "string",
+            "example": "Recurring month-end checklist"
+          },
+          "requestor": {
+            "$ref": "#/components/schemas/IUser"
+          },
+          "follower": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IUser"
+            }
+          },
+          "contributor": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IUser"
+            }
+          },
+          "calendar": {
+            "$ref": "#/components/schemas/ICalendarRef"
+          },
+          "repeatOption": {
+            "type": "string",
+            "example": "monthly"
+          },
+          "beforeEventDateNumber": {
+            "type": "integer",
+            "example": 0
+          },
+          "schedule": {
+            "$ref": "#/components/schemas/IRecurringSchedule"
+          },
+          "customDate": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "activeActualDates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IActiveActualDate"
+            }
+          },
+          "isDisabled": {
+            "type": "boolean",
+            "example": false
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ITagItem"
+            }
+          }
+        }
+      },
+      "IStandardField": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "standardField_reviewer"
+          },
+          "title": {
+            "type": "string",
+            "example": "Reviewer"
+          },
+          "iconName": {
+            "type": "string",
+            "example": "People"
+          },
+          "isEnabled": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "IInstanceUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "e6674e96-7576-4eff-a46f-3d9c03871075"
+          },
+          "imageInitials": {
+            "type": "string",
+            "example": "AV"
+          },
+          "secondaryText": {
+            "type": "string",
+            "example": "AdeleV@M365x80523924.OnMicrosoft.com"
+          },
+          "text": {
+            "type": "string",
+            "example": "Adele Vance"
+          }
+        }
+      },
+      "IInstanceUserList": {
+        "type": "object",
+        "properties": {
+          "members": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IInstanceUser"
+            }
+          },
+          "owners": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IInstanceUser"
+            }
+          }
+        }
+      },
+      "IInstance": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94"
+          },
+          "channelId": {
+            "type": "string",
+            "example": "19:IO8j2dfAOt_xRaNYZAKG31XLbvE-rcLhzgSc2PpMgoI1@thread.tacv2"
+          },
+          "name": {
+            "type": "string",
+            "example": "Instance A1"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-06-26T02:23:41.3727300Z"
+          },
+          "isWizardShown": {
+            "type": "boolean",
+            "example": false
+          },
+          "standardFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IStandardField"
+            }
+          },
+          "customFields": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "inactiveCustomFields": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "userList": {
+            "$ref": "#/components/schemas/IInstanceUserList"
+          },
+          "userMembershipMode": {
+            "type": "string",
+            "example": "public"
+          },
+          "groupId": {
+            "type": "string",
+            "format": "uuid",
+            "example": "1b9c23ec-9480-48c9-b646-2ed35cf09982"
           }
         }
       }
