@@ -37,7 +37,6 @@
                           "eventDate": "2026-06-24T00:00:00",
                           "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                           "groupId": null,
-                          "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
                           "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
                           "title": "Checklist A1",
                           "description": "123",
@@ -191,7 +190,6 @@
                         "id": "checklist-123",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "status": "Submitted",
                         "title": "Monthly closing checklist",
@@ -343,8 +341,18 @@
                           "displayName": "MOD Administrator",
                           "email": "admin@m365x80523924.onmicrosoft.com"
                         },
-                        "attachment": [],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "taskTags": [
                           {
                             "id": "tag-001",
@@ -390,7 +398,6 @@
                         "eventDate": "2026-06-24T00:00:00",
                         "id": "d234be3d-7bf5-4670-b6f0-05924aa3a07a",
                         "subscriptionId": null,
-                        "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
                         "instanceId": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
                         "title": "Checklist A1",
                         "description": "123",
@@ -513,7 +520,6 @@
                         "id": "checklist-123",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "status": "Submitted",
                         "title": "Monthly closing checklist",
@@ -683,7 +689,18 @@
                               "contentType": "application/pdf"
                             }
                           ],
-                          "customFieldInput": [],
+                          "customFieldInput": [
+                            {
+                              "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                              "value": "Hello World"
+                            },
+                            {
+                              "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                              "value": [
+                                "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                              ]
+                            }
+                          ],
                           "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
                           "dueDate": "2026-06-25T09:00:00Z",
@@ -831,7 +848,18 @@
                             "contentType": "application/pdf"
                           }
                         ],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
                         "dueDate": "2026-06-25T09:00:00Z",
@@ -932,7 +960,18 @@
                               "contentType": "application/pdf"
                             }
                           ],
-                          "customFieldInput": [],
+                          "customFieldInput": [
+                            {
+                              "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                              "value": "Hello World"
+                            },
+                            {
+                              "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                              "value": [
+                                "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                              ]
+                            }
+                          ],
                           "status": "Open",
                           "dueDate": "2026-06-25T09:00:00Z",
                           "taskTags": [
@@ -1241,7 +1280,18 @@
                                 "contentType": "application/pdf"
                               }
                             ],
-                            "customFieldInput": [],
+                            "customFieldInput": [
+                              {
+                                "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                                "value": "Hello World"
+                              },
+                              {
+                                "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                                "value": [
+                                  "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                                ]
+                              }
+                            ],
                             "createdAt": "2026-06-23T09:00:00Z",
                             "status": "Open",
                             "dueDate": "2026-06-25T09:00:00Z",
@@ -1403,7 +1453,18 @@
                             "contentType": "application/pdf"
                           }
                         ],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
                         "dueDate": "2026-06-25T09:00:00Z",
@@ -1541,7 +1602,18 @@
                             "contentType": "application/pdf"
                           }
                         ],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
                         "dueDate": "2026-06-25T09:00:00Z",
@@ -1641,7 +1713,16 @@
                         "contentType": "application/pdf"
                       }
                     ],
-                    "customFieldInput": [],
+                    "customFieldInput": [
+                      {
+                        "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                        "value": "Hello World"
+                      },
+                      {
+                        "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                        "value": ["option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"]
+                      }
+                    ],
                     "createdAt": "2026-06-23T09:00:00Z",
                     "status": "Open",
                     "dueDate": "2026-06-25T09:00:00Z",
@@ -2010,7 +2091,6 @@
                       "message": "Success",
                       "data": {
                         "id": "8a7191ec-96b0-413e-bb9e-e14fc70a0e94",
-                        "tenantId": "2bfe24d4-a7c5-4552-9142-4a0c82b193d2",
                         "channelId": "19:IO8j2dfAOt_xRaNYZAKG31XLbvE-rcLhzgSc2PpMgoI1@thread.tacv2",
                         "name": "Instance A1",
                         "color": null,
@@ -2571,7 +2651,6 @@
                         {
                           "id": "recurring-checklist-123",
                           "subscriptionId": "sub-123",
-                          "tenantId": "tenant-123",
                           "instanceId": "instance-123",
                           "title": "Monthly closing checklist",
                           "description": "Recurring month-end checklist",
@@ -2700,7 +2779,6 @@
                       "data": {
                         "id": "recurring-checklist-123",
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -2887,7 +2965,6 @@
                       "data": {
                         "id": "recurring-checklist-123",
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -3026,7 +3103,6 @@
                       "data": {
                         "id": "recurring-checklist-123",
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
@@ -3136,7 +3212,6 @@
                     "username": "Alex Tan",
                     "checklist": {
                       "subscriptionId": "sub-123",
-                      "tenantId": "tenant-123",
                       "instanceId": "instance-123",
                       "title": "Monthly closing checklist",
                       "description": "Recurring month-end checklist",
@@ -3210,7 +3285,18 @@
                               "contentType": "application/pdf"
                             }
                           ],
-                          "customFieldInput": [],
+                          "customFieldInput": [
+                            {
+                              "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                              "value": "Hello World"
+                            },
+                            {
+                              "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                              "value": [
+                                "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                              ]
+                            }
+                          ],
                           "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
                           "dueDate": "2026-06-25T09:00:00Z",
@@ -3292,7 +3378,18 @@
                               "contentType": "application/pdf"
                             }
                           ],
-                          "customFieldInput": [],
+                          "customFieldInput": [
+                            {
+                              "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                              "value": "Hello World"
+                            },
+                            {
+                              "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                              "value": [
+                                "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                              ]
+                            }
+                          ],
                           "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
                           "dueDate": "2026-06-25T09:00:00Z",
@@ -3428,7 +3525,18 @@
                             "contentType": "application/pdf"
                           }
                         ],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Open",
                         "dueDate": "2026-06-25T09:00:00Z",
@@ -3532,7 +3640,18 @@
                               "contentType": "application/pdf"
                             }
                           ],
-                          "customFieldInput": [],
+                          "customFieldInput": [
+                            {
+                              "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                              "value": "Hello World"
+                            },
+                            {
+                              "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                              "value": [
+                                "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                              ]
+                            }
+                          ],
                           "createdAt": "2026-06-23T09:00:00Z",
                           "status": "Open",
                           "dueDate": "2026-06-25T09:00:00Z",
@@ -3687,7 +3806,6 @@
                         "id": "checklist-123",
                         "checklistNo": 42,
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "status": "Submitted",
                         "title": "Monthly closing checklist",
@@ -3862,7 +3980,18 @@
                             "contentType": "application/pdf"
                           }
                         ],
-                        "customFieldInput": [],
+                        "customFieldInput": [
+                          {
+                            "id": "customField_7d8c51c1-2405-4b21-808e-51010ddddc56",
+                            "value": "Hello World"
+                          },
+                          {
+                            "id": "customField_a6388cd0-1fd7-4ed6-9ccf-305366ca2136",
+                            "value": [
+                              "option_8bdd766b-e42c-4b5f-8a8d-065b3364537c"
+                            ]
+                          }
+                        ],
                         "createdAt": "2026-06-23T09:00:00Z",
                         "status": "Resolved",
                         "dueDate": "2026-06-25T09:00:00Z",
@@ -3971,7 +4100,6 @@
                       "data": {
                         "id": "recurring-checklist-123",
                         "subscriptionId": "sub-123",
-                        "tenantId": "tenant-123",
                         "instanceId": "instance-123",
                         "title": "Monthly closing checklist",
                         "description": "Recurring month-end checklist",
