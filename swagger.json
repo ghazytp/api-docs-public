@@ -3250,6 +3250,328 @@
         "tags": ["Recurring Checklists"]
       }
     },
+    "/recurring-checklists/{recurringChecklistId}/tasks": {
+      "get": {
+        "summary": "List recurring checklist tasks",
+        "operationId": "get-recurring-checklist-tasks",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example List recurring checklist tasks response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": [
+                        {
+                          "id": "task-123",
+                          "name": "Review supporting documents",
+                          "taskNo": 1,
+                          "instanceId": "instance-123",
+                          "checklistId": "recurring-checklist-123",
+                          "checklistName": "Monthly closing checklist",
+                          "dueDateNumber": 2,
+                          "assignee": {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          },
+                          "reviewer": {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          },
+                          "attachment": [
+                            {
+                              "id": "attachment-123",
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "createdAt": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "dueDate": "2026-06-25T09:00:00Z",
+                          "groupId": "group-123",
+                          "taskTags": [
+                            {
+                              "id": "tag-001",
+                              "text": "High"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "concept",
+        "description": "Public recurring checklist task listing concept.",
+        "parameters": [
+          {
+            "name": "recurringChecklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "recurring-checklist-123"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of items to return.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 10
+          }
+        ],
+        "tags": ["Tasks"]
+      },
+      "post": {
+        "summary": "Create recurring checklist task",
+        "operationId": "post-recurring-checklist-task",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "summary": "Example Create recurring checklist task response",
+                    "value": {
+                      "error": false,
+                      "message": "Success",
+                      "data": {
+                        "id": "task-123",
+                        "name": "Review supporting documents",
+                        "checklistNo": 1,
+                        "instanceId": "instance-123",
+                        "checklistId": "recurring-checklist-123",
+                        "checklistName": "Monthly closing checklist",
+                        "dueDateNumber": 2,
+                        "assignee": {
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
+                        },
+                        "reviewer": {
+                          "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                          "displayName": "MOD Administrator",
+                          "email": "admin@m365x80523924.onmicrosoft.com"
+                        },
+                        "attachment": [
+                          {
+                            "id": "attachment-123",
+                            "fileName": "evidence.pdf",
+                            "url": "https://example.com/evidence.pdf",
+                            "contentType": "application/pdf"
+                          }
+                        ],
+                        "customFieldInput": [],
+                        "createdAt": "2026-06-23T09:00:00Z",
+                        "status": "Open",
+                        "dueDate": "2026-06-25T09:00:00Z",
+                        "groupId": "group-123",
+                        "taskTags": [
+                          {
+                            "id": "tag-001",
+                            "text": "High"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Unauthorized response",
+                    "value": {
+                      "error": true,
+                      "message": "Unauthorized",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Forbidden response",
+                    "value": {
+                      "error": true,
+                      "message": "Forbidden",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "default": {
+                    "summary": "Internal server error response",
+                    "value": {
+                      "error": true,
+                      "message": "Internal server error",
+                      "data": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "default": {
+                  "summary": "Example Create recurring checklist task request",
+                  "value": {
+                    "username": "Alex Tan",
+                    "tasks": {
+                      "create": [
+                        {
+                          "name": "Review supporting documents",
+                          "checklistNo": 1,
+                          "instanceId": "instance-123",
+                          "checklistId": "recurring-checklist-123",
+                          "checklistName": "Monthly closing checklist",
+                          "dueDateNumber": 2,
+                          "assignee": {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          },
+                          "reviewer": {
+                            "id": "5a70122c-407e-4fa5-8a6f-326f463f954c",
+                            "displayName": "MOD Administrator",
+                            "email": "admin@m365x80523924.onmicrosoft.com"
+                          },
+                          "attachment": [
+                            {
+                              "fileName": "evidence.pdf",
+                              "url": "https://example.com/evidence.pdf",
+                              "contentType": "application/pdf"
+                            }
+                          ],
+                          "customFieldInput": [],
+                          "createdAt": "2026-06-23T09:00:00Z",
+                          "status": "Open",
+                          "dueDate": "2026-06-25T09:00:00Z",
+                          "groupId": "group-123",
+                          "taskTags": [
+                            {
+                              "id": "tag-001",
+                              "text": "High"
+                            }
+                          ]
+                        }
+                      ],
+                      "update": [],
+                      "delete": [],
+                      "noAction": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-implementation-status": "available",
+        "x-existing-api": "UpdateRecurringChecklist",
+        "description": "Public recurring checklist task creation concept backed by UpdateRecurringChecklist using tasks.create.",
+        "parameters": [
+          {
+            "name": "recurringChecklistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "recurring-checklist-123"
+          }
+        ],
+        "tags": ["Tasks"]
+      }
+    },
     "/tasks/{taskId}/attachment": {
       "post": {
         "summary": "Upload task attachment",
